@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=1380">
+    <title>혜윰</title>
+    <!-- favicon -->
+    <link rel="shortcut icon" href="../images/favicon32x32.png" type="image/x-icon">
+    <!-- webfont -->
+    <link rel="stylesheet" as="style" crossorigin
+        href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable.min.css" />
+    <!-- css -->
+    <link rel="stylesheet" href="../css/style_sub_04.css">
+    <!-- aos css -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- swiper css -->
+    <link rel="stylesheet" href="../css/swiper-bundle.min.css">
+</head>
+
+<body>
+    <div id="wrap">
+        <div id="header">
+            <div class="header_top">
+                <h1 class="logo">
+                    <a href="../index.html">
+                        <img src="../images/header/logo.svg" alt="logo">
+                    </a>
+                </h1>
+                <ul class="util">
+                    <li>
+                        <a href="#">로그인</a>
+                    </li>
+                    <li>
+                        <a href="#">회원가입</a>
+                    </li>
+                    <li>
+                        <a href="#">마이페이지</a>
+                    </li>
+                </ul>
+                <div class="modal">
+                    <div class="popup">
+                        <div class="id_wrap">
+                            <form action="#">
+                                <input type="text" placeholder="사용자 이름">
+                            </form>
+                        </div>
+                        <div class="pw_wrap">
+                            <form action="#">
+                                <input type="password" placeholder="비밀번호">
+                            </form>
+                        </div>
+                        <button class="btn_login">로그인</button>
+                        <ul>
+                            <li>
+                                <a href="#">비밀번호 찾기</a>
+                            </li>
+                            <li>
+                                <a href="#">아이디 찾기</a>
+                            </li>
+                            <li>
+                                <a href="#">회원가입</a>
+                            </li>
+                        </ul>
+                        <button class="btn_close"><img src="../images/header/btn_close.svg" alt="btn_close"></button>
+                    </div>
+                </div>
+            </div>
+            <div class="header_bot">
+                <div class="gnb_wrap">
+                    <ul class="gnb">
+                        <li>
+                            <a href="./sub_01_brand.html">BRAND</a>
+                        </li>
+                        <li>
+                            <a href="./sub_02_subscriptions.html">SUBSCRIPTIONS</a>
+                        </li>
+                        <li>
+                            <a href="./sub_03_event.html">EVENT</a>
+                        </li>
+                        <li>
+                            <a href="./sub_04_support.html">SUPPORT</a>
+                        </li>
+                    </ul>
+                    <div class="submenu">
+                        <div class="inner_submenu">
+                            <ul>
+                                <li>
+                                    <a href="./sub_01_brand.html#section_1_brand_identity">Brand Identity</a>
+                                </li>
+                                <li>
+                                    <a href="./sub_01_brand.html#section_2_brand_principle">Brand Principle</a>
+                                </li>
+                                <li>
+                                    <a href="./sub_01_brand.html#section3_brand_philosophy">Brand Philosophy</a>
+                                </li>
+                            </ul>
+                            <ul>
+                                <li>
+                                    <a href="./sub_02_subscriptions.html#section_2_service_tab">All Subscripstions</a>
+                                </li>
+                                <li>
+                                    <a href="./sub_02_subscriptions.html#section_3_membership">Membership</a>
+                                </li>
+                            </ul>
+                            <ul>
+                            </ul>
+                            <ul>
+                                <li>
+                                    <a href="./sub_04_support.html#section_1_notice">Notice & FAQ</a>
+                                </li>
+                                <li>
+                                    <a href="./sub_04_support.html#section_2_contact">Contact</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="container">
+            <div id="section_1_notice">
+                <p>
+                    혜윰에게 물어보세요
+                </p>
+                <div class="search_wrap">
+                    <form action="#">
+                        <input type="search" id="search_bar" placeholder="공지사항 & FAQ 검색">
+                    </form>
+                </div>
+                <div class="notice_wrap">
+                    <ul id="notice_tab">
+                        <li class="tab tablink opacity" onclick="openBoard(event,'Board01')">Notice</li>
+                        <li class="tab tablink" onclick="openBoard(event,'Board02')">FAQ</li>
+                    </ul>
+                    <div id="Board01" class="box1_1	board">
+                        <div class="notice_title">
+                            <h3>공지사항</h3>
+                            <a href="#">
+                                <img src="../images/sub4_images/section_1_notice/icon_pointer.svg" alt="icon_pointer">
+                            </a>
+                        </div>
+                        <ul class="notice_list">
+                            <li>
+                                <a href="#">
+                                    <p>혜윰 서비스 회원 개인정보 이용내역 안내</p>
+                                    <span>
+                                        2024.07.15
+                                    </span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <p>혜윰 서비스 개인정보 처리방침 변경 안내</p>
+                                    <span>
+                                        2024.06.21
+                                    </span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <p>이용약관 개정안내 (2024년 6월 16일)</p>
+                                    <span>
+                                        2024.06.16
+                                    </span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <p>5월 24일(금) 서비스 업데이트 안내</p>
+                                    <span>
+                                        2024.05.24
+                                    </span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div id="Board02" class="box1_1	board" style="display:none;">
+                        <h2>자주 묻는 질문</h2>
+                        <div class="accordion">
+                            <div class="accordion-item">
+                                <button id="accordion-button-1" aria-expanded="false">
+                                    <span class="accordion-title">누구나 첫 달 무료 혜택을 받을 수 있나요?
+                                    </span>
+                                    <span class="icon" aria-hidden="true">
+                                        <img src="../images/sub4_images/section_1_notice/icon_pointer_down.svg"
+                                            alt="icon_pointer_down">
+                                    </span>
+                                </button>
+                                <div class="accordion-content">
+                                    <p>
+                                        북저니, 무제한 요금제 첫 가입 시 첫 달 무료 혜택을 받을 수 있습니다.
+                                        <br>다만, 패밀리 요금제, 이용권 구매, 서비스 이용 종료 후 재가입 시에는 혜택을 받을 수 없습니다.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <button id="accordion-button-2" aria-expanded="false">
+                                    <span class="accordion-title">
+                                        구독중 언제나 해지할 수 있나요?
+                                    </span>
+                                    <span class="icon" aria-hidden="true">
+                                        <img src="../images/sub4_images/section_1_notice/icon_pointer_down.svg"
+                                            alt="icon_pointer_down">
+                                    </span>
+                                </button>
+                                <div class="accordion-content">
+                                    <p>
+                                        다음달 부터 결제되지 않도록 수수료 없이 언제든지 해지하실 수 있습니다.
+                                        <br><span>
+                                            [마이페이지 > 구독 > 자동결제 해지]
+                                        </span>
+                                        에서 해지예약을 하시면, 다음 결제일에 결제가 진행되지 않습니다.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <button id="accordion-button-3" aria-expanded="false">
+                                    <span class="accordion-title">
+                                        정기구독 이후에도 환불 받을 수 있나요?
+                                    </span>
+                                    <span class="icon" aria-hidden="true">
+                                        <img src="../images/sub4_images/section_1_notice/icon_pointer_down.svg"
+                                            alt="icon_pointer_down">
+                                    </span>
+                                </button>
+                                <div class="accordion-content">
+                                    <p>
+                                        혜윰 서비스를 이용하지 않은 (스트리밍 또는 다운로드) 경우에는, 결제일로부터 7일 이내에 구독 취소(환불) 가능합니다.
+                                        <br>다만, 서비스를 이용한 경우에는 결제일로부터 7일 이내더라도 환불이 불가합니다.
+                                        <br>7일이 지나도 서비스 이용 이력이 없는 상태에서 환불 요청 시, 1개월 결제 건에 한하여 수수료 10%를 공제한 후, 남은
+                                        금액(90%)
+                                        환불이 가능한 점 참고해 주세요.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <button id="accordion-button-4" aria-expanded="false">
+                                    <span class="accordion-title">
+                                        혜윰 서비스는 어떻게 이용하나요?
+                                    </span>
+                                    <span class="icon" aria-hidden="true">
+                                        <img src="../images/sub4_images/section_1_notice/icon_pointer_down.svg"
+                                            alt="icon_pointer_down">
+                                    </span>
+                                </button>
+                                <div class="accordion-content">
+                                    <p>
+                                        1. 혜윰 홈페이지에서 가입해주세요.
+                                        <br>2. 구글 플레이스토어 또는 앱스토어에서 ‘혜윰’을 검색하여 다운로드 받아주세요.
+                                        <br>3. 설치 후 앱에서 혜윰 아이디로 로그인하시면 혜윰 서비스 이용이 가능합니다.
+                                    </p>
+                                    <p>
+                                        *PC는 혜윰 PC뷰어 프로그램 설치하여 이용 가능합니다.
+                                        <br>*PC뷰어 설치 및 자세한 이용 방법은 가입 후 이용안내 페이지에서도 상세하게 확인 가능합니다.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <button id="accordion-button-5" aria-expanded="false">
+                                    <span class="accordion-title">혜윰 포인트가 무엇인가요?</span>
+                                    <span class="icon" aria-hidden="true">
+                                        <img src="../images/sub4_images/section_1_notice/icon_pointer_down.svg"
+                                            alt="icon_pointer_down">
+                                    </span>
+                                </button>
+                                <div class="accordion-content">
+                                    <p>
+                                        혜윰 구독제에 가입하시면, 매달 지급되는 독서지원 포인트로 혜윰 북스토어에서 eBook, 오디오 북 및 동영상등의 상품을 구입할 수
+                                        있습니다.
+                                    </p>
+                                    <p>
+                                        <span>[혜윰 포인트로 구매하기]</span>
+                                        <br>1. 혜윰 구독제에 가입하시면, 독서지원 혜윰 포인트가 지급됩니다. (최초 가입 시 1,500원 | 최초 자동결제부터 매달
+                                        3,000원
+                                        자동 지급)
+                                        <br>2. 혜윰앱의 상품 상세 페이지에서 혜윰 포인트 혜택가를 확인하여 적용할 수 있습니다.
+                                    </p>
+                                    <p>
+                                        <span>[혜윰 포인트 이용안내]</span>
+                                        <br>- <span>[혜윰 북스토어]</span> 대상 상품에만 사용 가능합니다.
+                                        <br>- 매월 자동 결제일 오후 6시 이전에 지급됩니다.
+                                        <br>- 지급일로부터 1년 동안 사용하실 수 있습니다.
+                                        <br>- 쿠폰등의 모든 결제 수단과 함께 사용이 가능하며, 다른 결제수단보다 우선 적용됩니다. (사용자가 적용여부를 선택할 수
+                                        없습니다.)
+                                        <br>- 상품 결제에 사용한 혜윰 포인트는 주문 취소 시 환불됩니다.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="section_2_contact">
+                <div class="section2_content">
+                    <div class="map_wrap">
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d816.0675272366678!2d129.0363359696422!3d35.09996559552387!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3568e9cb98007c4d%3A0xc41543dbde45b847!2z64uk7JuQ7KSR7JWZ7YOA7JuMIOu5jOuUqQ!5e0!3m2!1sko!2skr!4v1721373565632!5m2!1sko!2skr"
+                            width="999" height="500" style="border:0;" allowfullscreen="" loading="lazy"
+                            referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+                    <div class="txt_wrap">
+                        <p>
+                            부산광역시 중구 중앙대로
+                            <br>26 다원중앙타워 빌딩 10층
+                        </p>
+                        <p>
+                            010-8617-2930
+                        </p>
+                        <p>
+                            heyum@gmail.com
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="footer">
+            <div class="inner_footer">
+                <h1 class="footer_logo">
+                    <img src="../images/footer/footer_logo.svg" alt="footer_logo">
+                </h1>
+                <div class="footer_txt">
+                    <ul class="footer_menu">
+                        <li>
+                            <a href="#">회사소개</a>
+                        </li>
+                        <li>
+                            <a href="#">이용약관</a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <span>개인정보처리방침</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">청소년보호정책</a>
+                        </li>
+                        <li>
+                            <a href="#">콘텐츠 제휴문의</a>
+                        </li>
+                    </ul>
+                    <p>
+                        대표:전보현
+                        <br>주소 : 부산광역시 중구 중앙대로 26 다원중앙타워 9층
+                        <br>E-Mail : Heyum@Gmail.com
+                        <br>Tel : 010 - 8617 - 2930
+                    </p>
+                    <p>
+                        Copyright Ⓒ Heyum Company. All Rights Reserved.
+                    </p>
+                </div>
+                <ul class="sns_link">
+                    <li>
+                        <a href="#">
+                            <img src="../images/footer/sns_youtube.png" alt="sns_youtube">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="../images/footer/sns_twitter.png" alt="sns_twitter">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="../images/footer/sns_insta.png" alt="sns_insta">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="../images/footer/sns_discord.png" alt="sns_discord">
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div id="top_btn">
+            <p>Top</p>
+        </div>
+    </div>
+    <!-- jq js -->
+    <script src="../js/jquery-3.7.1.min.js"></script>
+    <script>
+        // 모달 팝업
+        $('.modal').hide();
+        $('.util li a').click(function () {
+            $('.modal').fadeIn();
+        });
+        $('.btn_close').click(function () {
+            $('.modal').fadeOut(0);
+        });
+        $(document).mouseup(function (e) {
+            if ($(".modal").has(e.target).length === 0) {
+                $(".modal").hide();
+            }
+        });
+        // 서브메뉴
+        $('.submenu').hide();
+        $('.header_bot').mouseenter(function () {
+            $('.submenu').stop().slideDown(200);
+        });
+        $('.header_bot').mouseleave(function () {
+            $('.submenu').stop().slideUp(200);
+        });
+        // 탑버튼
+        $('#top_btn').click(function () {
+            $('body, html').animate({
+                scrollTop: 0
+            }, 500);
+        });
+        //tab
+        function openBoard(evt, boardName) {
+            var i, x, tablinks;
+            x = document.getElementsByClassName("board");
+            for (i = 0; i < x.length; i++) {
+                x[i].style.display = "none";
+            }
+            tablinks = document.getElementsByClassName("tablink");
+            for (i = 0; i < x.length; i++) {
+                tablinks[i].className = tablinks[i].className.replace(" opacity", "");
+            }
+            document.getElementById(boardName).style.display = "block";
+            evt.currentTarget.className += " opacity";
+        }
+        //faq
+        const items = document.querySelectorAll(".accordion button");
+        function toggleAccordion() {
+            const itemToggle = this.getAttribute('aria-expanded');
+
+            for (i = 0; i < items.length; i++) {
+                items[i].setAttribute('aria-expanded', 'false');
+            }
+
+            if (itemToggle == 'false') {
+                this.setAttribute('aria-expanded', 'true');
+            }
+        }
+        items.forEach(item => item.addEventListener('click', toggleAccordion));
+        $(function () {
+            $(".accordion-item button").click(function () {
+                $(this).children().children("img").toggleClass("turn");
+            });
+        });
+    </script>
+    <!-- swiper js  -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <!-- aos js -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+</body>
+
+</html>
