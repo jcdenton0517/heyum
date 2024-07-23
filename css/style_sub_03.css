@@ -47,14 +47,21 @@ html{
     display: flex;
 }
 
+.util li{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 31px;
+}
 .util li a {
     display: block;
     background-color: #3B2722;
     border-radius: 30rem;
     color: #FBF1DE;
     font-size: 14px;
+    font-weight: 600;
     margin-left: 15px;
-    padding: 2px 15px;
+    padding: 0px 15px;
 }
 .util li a:hover{
     color: #FFAA39;
@@ -405,7 +412,7 @@ html{
     margin: 100px auto;
 }
 #section_1_event>h2{
-    font-size: 40px;    
+    font-size: 40px;
     text-align: center;
 }
 .box{

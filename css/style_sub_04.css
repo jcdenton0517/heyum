@@ -61,14 +61,21 @@ body {
     display: flex;
 }
 
+.util li{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 31px;
+}
 .util li a {
     display: block;
     background-color: #3B2722;
     border-radius: 30rem;
     color: #FBF1DE;
     font-size: 14px;
+    font-weight: 600;
     margin-left: 15px;
-    padding: 2px 15px;
+    padding: 0px 15px;
 }
 
 .util li a:hover {
@@ -482,7 +489,9 @@ body {
     height: 500px;
     border-radius: 35px;
     overflow: hidden;
+    position: relative;
 }
+
 
 .txt_wrap {
     width: 240px;
