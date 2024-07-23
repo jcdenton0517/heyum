@@ -547,8 +547,8 @@ html{
     opacity: 0;
 }
 .event_end_cover p{
-    font-size: 60px;
-    line-height: 70px;
+    font-size: 40px;
+    line-height: 50px;
     text-align: center;
 }
 .event_box:hover .event_end_cover{
