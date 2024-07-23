@@ -489,11 +489,11 @@ html{
     overflow: hidden;
 }
 .event_box>div{
-    transition: all 0.75s;
+    transition: all 0.65s;
     height: 100%;
 }
 .event_box>div:hover{
-    transform: scale(1.1);
+    transform: scale(1.05);
 }
 .event_box_01>div{
     background-image: url(../images/sub3_images/section_event/event_banner_01.png);
