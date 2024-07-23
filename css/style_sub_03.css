@@ -414,7 +414,7 @@ html{
     flex-flow: column wrap;
 }
 .tabset--nav{
-    margin: 30px 0 60px;
+    margin: 30px 0 40px;
     position: relative;
     display: flex;
     justify-content: flex-start;
@@ -426,14 +426,14 @@ html{
     cursor: pointer;
     background-color: transparent;
     border-radius: 30px;
-    width: 200px;
-    height: 40px;
+    width: 150px;
+    height: 35px;
     border: #3B2722 1px solid;
-    font-size: 24px;
+    font-size: 18px;
     margin-right: 20px;
     text-align: center;
     box-sizing: border-box;
-    padding-top: 5px;
+    padding-top: 3px;
 }
 .nav--item:hover{
     font-weight: bold;
