@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 60 28">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #785840;
+      }
+
+      .cls-1, .cls-2 {
+        stroke-width: 0px;
+      }
+
+      .cls-2 {
+        fill: #fbf1de;
+      }
+    </style>
+  </defs>
+  <g id="_그룹_2656" data-name="그룹 2656">
+    <g id="_그룹_2655" data-name="그룹 2655">
+      <g id="_그룹_2654" data-name="그룹 2654">
+        <g id="_그룹_2447" data-name="그룹 2447">
+          <rect id="_사각형_1341" data-name="사각형 1341" class="cls-1" x="0" y="0" width="60" height="22" rx="9" ry="9"/>
+          <path id="_다각형_2" data-name="다각형 2" class="cls-1" d="M13,28l-6-9h12l-6,9Z"/>
+        </g>
+      </g>
+    </g>
+  </g>
+  <g id="_그룹_2446" data-name="그룹 2446">
+    <path id="_선_119" data-name="선 119" class="cls-2" d="M51.7,16.5c-.3,0-.5-.2-.5-.5V6c0-.3.2-.5.5-.5s.5.2.5.5v10c0,.3-.2.5-.5.5Z"/>
+    <path id="_선_120" data-name="선 120" class="cls-2" d="M51.7,16.5c-.1,0-.3,0-.4-.1l-4-4c-.2-.2-.2-.5,0-.7.2-.2.5-.2.7,0l4,4c.2.2.2.5,0,.7,0,0-.2.1-.4.1Z"/>
+    <path id="_선_121" data-name="선 121" class="cls-2" d="M51.7,16.5c-.1,0-.3,0-.4-.1-.2-.2-.2-.5,0-.7l4-4c.2-.2.5-.2.7,0,.2.2.2.5,0,.7l-4,4c0,0-.2.1-.4.1Z"/>
+  </g>
+</svg>

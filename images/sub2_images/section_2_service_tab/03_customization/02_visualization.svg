@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 22.1.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 100 100" style="enable-background:new 0 0 100 100;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:url(#타원_170_1_);}
+	.st1{fill:#FFFFFF;}
+	.st2{fill:#B27777;}
+	.st3{fill:#F7EFC4;}
+	.st4{fill:#D3A17F;}
+	.st5{fill:none;}
+	.st6{fill:none;stroke:#351C17;stroke-width:0.5;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;}
+</style>
+<g id="Layer_1_1_" transform="translate(-5.881 -5.962)">
+	<g id="Layer_1-2" transform="translate(5.8 5.88)">
+		
+			<linearGradient id="타원_170_1_" gradientUnits="userSpaceOnUse" x1="-898.965" y1="585.3679" x2="-899.7119" y2="586.0328" gradientTransform="matrix(100 0 0 -100 89982.9844 58619.2813)">
+			<stop  offset="0" style="stop-color:#D45E00"/>
+			<stop  offset="1" style="stop-color:#FFF1AA"/>
+		</linearGradient>
+		<circle id="타원_170" class="st0" cx="50.1" cy="50.1" r="50"/>
+		<g id="_312641160" transform="translate(17.888 25.624)">
+			<g id="그룹_2529" transform="translate(0 0.021)">
+				<path id="_312641280" class="st1" d="M61.2,37.1h-58c-1.8,0-3.3-1.5-3.3-3.3V3c0-1.8,1.5-3.3,3.3-3.3h58c1.8,0,3.3,1.5,3.3,3.3
+					v30.9C64.5,35.6,63,37.1,61.2,37.1L61.2,37.1z M61,31.1H3.5v-28H61V31.1z M58.9,33.7c-0.4,0-0.7,0.3-0.7,0.7
+					c0,0.4,0.3,0.7,0.7,0.7c0,0,0,0,0.1,0h0.5c0.4,0,0.7-0.3,0.7-0.7c0-0.4-0.3-0.7-0.7-0.7H58.9z"/>
+				<path id="_312642816" class="st2" d="M53.8,14.6h3v14.8h-3V14.6z"/>
+				<path id="_312642168" class="st2" d="M48,18.6h3v10.8h-3V18.6z"/>
+				<path id="_312642480" class="st2" d="M36.5,21.5h3v8h-3V21.5z"/>
+				<path id="_312642672" class="st2" d="M42.3,17.4h3v12h-3V17.4z"/>
+				<g>
+					<path id="_312642576" class="st3" d="M49.1,11.6c1.3,0,2.4,1.1,2.4,2.4s-1.1,2.4-2.4,2.4s-2.4-1.1-2.4-2.4S47.8,11.6,49.1,11.6
+						z"/>
+					<path id="_312641976" class="st3" d="M55.3,5.4c1.3,0,2.4,1.1,2.4,2.4c0,1.3-1.1,2.4-2.4,2.4c-1.3,0-2.4-1.1-2.4-2.4v0
+						C52.9,6.5,54,5.4,55.3,5.4z"/>
+					<path id="_312642408" class="st3" d="M43.3,8.3c1.3,0,2.4,1.1,2.4,2.4c0,1.3-1.1,2.4-2.4,2.4c-1.3,0-2.4-1.1-2.4-2.4v0
+						C40.9,9.3,42,8.3,43.3,8.3z"/>
+					<path id="_312642048" class="st3" d="M49.8,12.3l3.8-3.8l1,1l-3.8,3.8L49.8,12.3z"/>
+					<path id="_312642696" class="st3" d="M45.2,10.9l2.9,1.7l-0.7,1.2l-2.9-1.7L45.2,10.9z"/>
+					<path id="_312641736" class="st3" d="M37.4,15.6l4.3-4.3l1,1l-4.3,4.3L37.4,15.6L37.4,15.6z"/>
+				</g>
+				<path id="_312641520" class="st4" d="M17.6,7.4c1.5,0,3,0.3,4.3,1L17,17l-7,7.1C6.3,20,6.7,13.6,10.9,9.9
+					C12.7,8.3,15.1,7.4,17.6,7.4L17.6,7.4L17.6,7.4z M23.1,9c2.8,1.9,4.5,5,4.5,8.4c0,3.5-0.4,3.1-1,4.5l-8-4.7L23.1,9L23.1,9z
+					 M25.8,23.1c-1.9,2.7-5,4.3-8.3,4.3c-2.4,0.2-4.8-0.7-6.5-2.4l6.6-6.8L25.8,23.1z"/>
+				<path id="_312641544" class="st1" d="M22.2,45.5h20.1l-4.4-9.1H26.6L22.2,45.5z"/>
+				<path id="_312641328" class="st1" d="M14.9,44.4h34.8c0.9,0,1.6,0.7,1.6,1.6v2.8h-38V46C13.2,45.1,13.9,44.4,14.9,44.4
+					L14.9,44.4z"/>
+			</g>
+			<path id="_312640464" class="st5" d="M64.5,3.3C64.5,1.5,63,0,61.2,0"/>
+		</g>
+	</g>
+</g>
+<rect x="21.3" y="28.7" class="st6" width="57.5" height="28"/>
+</svg>

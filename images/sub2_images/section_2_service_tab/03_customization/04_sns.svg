@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 22.1.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 100 100" style="enable-background:new 0 0 100 100;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:url(#타원_171_1_);}
+	.st1{fill:#FFFFFF;}
+	.st2{fill:#E9EDF5;}
+	.st3{fill:#C6A48D;}
+	.st4{fill:#A57A5D;}
+	.st5{fill:#FFE7A4;}
+	.st6{fill:#C1A55F;}
+</style>
+<g id="_4.sns" transform="translate(0 -0.62)">
+	
+		<linearGradient id="타원_171_1_" gradientUnits="userSpaceOnUse" x1="-899.7838" y1="586.54" x2="-899.0278" y2="585.913" gradientTransform="matrix(100 0 0 -100 89991 58673.6211)">
+		<stop  offset="0" style="stop-color:#FFD7AA"/>
+		<stop  offset="1" style="stop-color:#6A4100"/>
+	</linearGradient>
+	<circle id="타원_171" class="st0" cx="50" cy="50.6" r="50"/>
+	<path id="패스_3486" class="st1" d="M68.2,47.9C75.8,48,82,41.9,82.1,34.2c0.1-7.6-6.1-13.8-13.7-13.9c-0.1,0-0.2,0-0.2,0
+		c-7.6,0-1.4,0.1-2.1,0.2c-3.4-8.7-13.2-13.1-22-9.7c-4.4,1.7-8,5.2-9.7,9.7c-0.7-0.1-1.4-0.2-2.1-0.2c-7.6,0.1-13.7,6.3-13.7,13.9
+		c0.1,7.5,6.1,13.6,13.7,13.7H68.2z"/>
+	<path id="패스_3487" class="st2" d="M68.2,20.3c-0.7,0-1.4,0.1-2.1,0.2c-2.5-6.5-8.8-10.8-15.8-10.8v38.3h17.9
+		c7.6-0.1,13.7-6.3,13.7-13.9C81.8,26.5,75.7,20.4,68.2,20.3L68.2,20.3L68.2,20.3z"/>
+	<path id="패스_3488" class="st3" d="M30.6,77.5L28,72.2l19.4-9.4V51.5h5.9v15L30.6,77.5L30.6,77.5z"/>
+	<path id="패스_3489" class="st3" d="M49,67.3l2.6-5.3l21,10.2L70,77.5L49,67.3z"/>
+	<path id="패스_3490" class="st4" d="M53.2,62.8V51.5h-2.9V68l0,0L70,77.5l2.6-5.3L53.2,62.8L53.2,62.8L53.2,62.8z"/>
+	<circle id="타원_172" class="st5" cx="50.3" cy="33.6" r="6.8"/>
+	<path id="패스_3491" class="st6" d="M57.1,33.6c0-3.8-3.1-6.8-6.8-6.8v13.7C54.1,40.4,57.1,37.3,57.1,33.6L57.1,33.6z"/>
+	<path id="패스_3492" class="st5" d="M39.2,52.3c0.1-6.2,5.1-11.1,11.2-11c6.1,0.1,11,5,11,11H39.2z"/>
+	<path id="패스_3493" class="st6" d="M50.3,41.2v11.1h11.1C61.4,46.2,56.4,41.2,50.3,41.2z"/>
+	<circle id="타원_173" class="st5" cx="27.1" cy="60.1" r="6.8"/>
+	<path id="패스_3494" class="st5" d="M16,78.8c-0.1-6.2,4.9-11.2,11-11.2s11.2,4.9,11.2,11c0,0.1,0,0.1,0,0.2H16z"/>
+	<circle id="타원_174" class="st6" cx="73.4" cy="60.1" r="6.8"/>
+	<path id="패스_3495" class="st6" d="M62.3,78.8c-0.1-6.2,4.9-11.2,11-11.2c6.2-0.1,11.2,4.9,11.2,11c0,0.1,0,0.1,0,0.2H62.3z"/>
+</g>
+</svg>
