@@ -294,10 +294,7 @@
             <div id="section_2_contact">
                 <div class="section2_content">
                     <div class="map_wrap">
-                        <iframe
-                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d816.0675272366678!2d129.0363359696422!3d35.09996559552387!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3568e9cb98007c4d%3A0xc41543dbde45b847!2z64uk7JuQ7KSR7JWZ7YOA7JuMIOu5jOuUqQ!5e0!3m2!1sko!2skr!4v1721373565632!5m2!1sko!2skr"
-                            width="999" height="500" style="border:0;" allowfullscreen="" loading="lazy"
-                            referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        <div id="daumRoughmapContainer1721719587623" class="root_daum_roughmap root_daum_roughmap_landing"></div>
                     </div>
                     <div class="txt_wrap">
                         <p>
@@ -440,6 +437,16 @@
                 $(this).children().children("img").toggleClass("turn");
             });
         });
+    </script>
+    <!-- 카카오맵 링크 -->
+    <script charset="UTF-8" class="daum_roughmap_loader_script" src="https://ssl.daumcdn.net/dmaps/map_js_init/roughmapLoader.js"></script>
+    <script charset="UTF-8">
+        new daum.roughmap.Lander({
+            "timestamp" : "1721719587623",
+            "key" : "2k5jg",
+            "mapWidth" : "999",
+            "mapHeight" : "500"
+        }).render();
     </script>
     <!-- swiper js  -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
