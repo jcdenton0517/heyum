@@ -27,6 +27,9 @@ html{
 #wrap{
     min-width: 1380px;
 }
+body{
+    background-color: #FFFAF5;
+}
 /* header */
 #header{
     background-color: #FBF1DE;
@@ -415,58 +418,87 @@ html{
     font-size: 40px;
     text-align: center;
 }
-.box{
-    overflow: hidden;
-    display: flex;
-    flex-flow: column wrap;
-}
-.tabset--nav{
-    margin: 30px 0 40px;
-    position: relative;
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    width: 100%;
-}
-.nav--item{
-    display: inline-block;
-    cursor: pointer;
-    background-color: transparent;
-    border-radius: 30px;
-    width: 150px;
-    height: 35px;
-    border: #3B2722 1px solid;
-    font-size: 18px;
-    margin-right: 20px;
-    text-align: center;
+.card {
     box-sizing: border-box;
-    padding-top: 3px;
-}
-.nav--item:hover{
-    font-weight: bold;
-}
-.-is--active{
-    background-color: #3B2722;
-    color: #FBF1DE;
-}
-.tabset--content {
     position: relative;
-    width: 200%;
-    flex-grow: 1;
-    display: flex;
-    align-items: stretch;
-    justify-content: space-between;
-    transition: 0.3s;
-}
-[data-active-tab="tab-1"] {
-    left: 0;
-}
-[data-active-tab="tab-2"] {
-    left: -100%;
-}
-.tabset--section {
     width: 100%;
+
+    max-width: calc(100% - 30px);
 }
+
+.card:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.slider {
+    float: left;
+    margin-top: 70px;
+    position: relative;
+    width: 100%;
+    color: #3B2722;
+
+    .slide-tabs {
+        bottom: 100%;
+        position: absolute;
+        margin-bottom: 50px;
+
+        .slide-tab {
+			display: inline-block;
+			cursor: pointer;
+			background-color: transparent;
+			border-radius: 30px;
+			width: 150px;
+			height: 35px;
+			border: #3B2722 1px solid;
+			font-size: 18px;
+			margin-right: 20px;
+			text-align: center;
+			box-sizing: border-box;
+			padding-top: 3px;
+            position: relative;
+            -webkit-transition: background 0.45s cubic-bezier(0.62,0.28,0.23,0.99), border-color 0.45s cubic-bezier(0.62,0.28,0.23,0.99);
+                    transition: background 0.45s cubic-bezier(0.62,0.28,0.23,0.99), border-color 0.45s cubic-bezier(0.62,0.28,0.23,0.99);
+
+            &.active {
+                background: #3B2722;
+				color: #FBF1DE;
+            }
+        }
+    }
+
+    .slides {
+        float: left;
+        overflow: hidden;
+        position: relative;
+        -webkit-transition: height 0.45s cubic-bezier(0.62,0.28,0.23,0.99);
+                transition: height 0.45s cubic-bezier(0.62,0.28,0.23,0.99);
+        width: 100%;
+
+        .slide-viewport {
+            height: 100%;
+            left: 0;
+            -webkit-transform: translateX(0);
+                    transform: translateX(0);
+            -webkit-transition: transform 0.45s cubic-bezier(0.62,0.28,0.23,0.99);
+                    transition: transform 0.45s cubic-bezier(0.62,0.28,0.23,0.99);
+            width: 100%;
+
+            .slide {
+                left: 0;
+                position: absolute;
+                top: 0;
+                width: 100%;
+
+                &:not(.default) {
+                    left: 100%;
+                }
+            }
+        }
+    }
+}
+
 .banner_wrap{
     display: flex;
     justify-content: space-between;
