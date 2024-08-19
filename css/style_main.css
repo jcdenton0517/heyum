@@ -1,1519 +1,1710 @@
-@charset "utf-8";
-
-/* webfont */
-@font-face {
-    font-family: 'RIDIBatang';
-    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_twelve@1.0/RIDIBatang.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-}
-
-html,
-body,
-div,
-p,
-ul,
-ol,
-li,
-a,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-input,
-textarea,
-select,
-option,
-span,
-em,
-strong,
-dl,
-dt,
-dd,
-table,
-th,
-td,
-tr,
-img,
-video {
-    margin: 0;
-    padding: 0;
-}
-
-a {
-    text-decoration: none;
-    color: inherit;
-}
-
-ul,
-ol {
-    list-style: none;
-}
-
-html {
-    font-family: 'Pretendard Variable';
-    font-size: 18px;
-    line-height: 26px;
-    color: #3B2722;
-}
-
-body {
-    background-color: #FBF1DE;
-}
-
-#wrap {
-    /* min-width: 1380px; */
-}
-
-/* header */
-.header_top {
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100px;
-    width: 1320px;
-    margin: 0 auto;
-}
-
-.util {
-    position: absolute;
-    top: 15px;
-    right: 15px;
-    display: flex;
-}
-
-.util li {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 31px;
-}
-
-.util li a {
-    display: block;
-    background-color: #3B2722;
-    border-radius: 30rem;
-    color: #FBF1DE;
-    font-size: 14px;
-    font-weight: 600;
-    margin-left: 15px;
-    padding: 0px 15px;
-}
-
-.util li a:hover {
-    color: #FFAA39;
-    box-shadow: 1px 2px 2px rgba(0, 0, 0, 0.2);
-}
-
-.modal {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    /* 높이 100% */
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.7);
-    z-index: 99;
-    display: none;
-}
-
-.modal button {
-    cursor: pointer;
-    border: none;
-}
-
-.popup {
-    width: 420px;
-    height: 280px;
-    background-color: #FBF1DE;
-    position: absolute;
-    top: 200px;
-    left: 50%;
-    margin-left: -210px;
-    z-index: 99;
-    padding: 40px 30px;
-    background-size: 100%;
-    box-sizing: border-box;
-    border-radius: 25px;
-    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.4);
-}
-
-.popup div {
-    width: 360px;
-    height: 40px;
-    border-radius: 15px;
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    background-color: #FFFAF5;
-    background-repeat: no-repeat;
-    margin-bottom: 5px;
-}
-
-.popup ul {
-    display: flex;
-    justify-content: center;
-}
-
-.popup ul li a {
-    display: inline-block;
-    font-size: 14px;
-    margin: 20px 10px 0px;
-}
-
-.popup ul li::before {
-    content: "";
-    display: inline-block;
-    width: 1px;
-    height: 11px;
-    margin-left: 11px;
-    background-color: #3B2722;
-    vertical-align: 0px;
-}
-
-.popup ul li:nth-child(1)::before {
-    display: none;
-}
-
-.id_wrap {
-    background-image: url(../images/header/id.svg);
-    background-position: left 15px top 8px;
-    background-size: 27px 23px;
-}
-
-.pw_wrap {
-    background-image: url(../images/header/pw.svg);
-    background-position: left 17px top 8px;
-    background-size: 20px 25px;
-}
-
-.popup div input {
-    display: block;
-    width: 300px;
-    border: none;
-    outline: none;
-    font-size: 16px;
-    background-color: #FFFAF5;
-}
-
-.btn_login {
-    width: 360px;
-    height: 40px;
-    border-radius: 15px;
-    background-color: #3B2722;
-    margin-top: 25px;
-    font-size: 20px;
-    color: #FBF1DE;
-    font-weight: bold;
-}
-
-.btn_close {
-    position: absolute;
-    top: 15px;
-    right: 15px;
-    background-color: transparent;
-}
-
-.header_bot {
-    height: 50px;
-    box-sizing: border-box;
-    border-top: 1px solid #bbb;
-    padding-top: 12px;
-}
-
-.gnb_wrap {
-    height: 50px;
-    width: 1320px;
-    margin: 0 auto;
-    display: flex;
-    justify-content: center;
-}
-
-.gnb {
-    display: flex;
-    justify-content: center;
-}
-
-.gnb li a {
-    display: block;
-    font-size: 16px;
-    font-weight: 600;
-    margin: 0 75px;
-    padding-bottom: 12px;
-}
-
-.gnb li a:hover {
-    color: #FFAA39;
-}
-
-.submenu {
-    position: absolute;
-    top: 150px;
-    left: 0;
-    width: 100%;
-    height: 128px;
-    background-color: #785840;
-    box-shadow: 0 5px 5px rgba(0, 0, 0, 0.4);
-    z-index: 9;
-}
-
-.inner_submenu {
-    width: 1320px;
-    margin: 0 auto;
-    display: flex;
-    text-align: center;
-    color: #FBF1DE;
-    justify-content: center;
-    padding: 10px 0;
-    font-size: 16px;
-    font-weight: 500;
-}
-
-.inner_submenu ul:nth-child(1) {
-    width: 202px;
-}
-
-.inner_submenu ul:nth-child(2) {
-    width: 272px;
-}
-
-.inner_submenu ul:nth-child(3) {
-    width: 199px;
-}
-
-.inner_submenu ul:nth-child(4) {
-    width: 221px;
-}
-
-.inner_submenu ul li a {
-    display: inline-block;
-    padding: 5px 15px;
-}
-
-.inner_submenu ul li a:hover {
-    color: #FFAA39;
-}
-
-.hamberger_wrap {
-    position: fixed;
-    top: 10px;
-    right: 10px;
-    z-index: 1;
-}
-
-#m_nav {
-    display: none;
-}
-
-.m_gnb_wrap {
-    position: fixed;
-    left: 100vw;
-    top: 0;
-    width: 50vw;
-    height: 45vh;
-    background-color: #3B2722;
-    color: #FBF1DE;
-    padding: 0 20px 65px;
-    box-sizing: border-box;
-    display: flex;
-    justify-content: flex-end;
-    align-items: flex-start;
-    flex-wrap: wrap;
-    z-index: 9;
-    font-size: 14px;
-}
-
-.close_btn{
-    background-color: transparent;
-    border: none;
-    cursor: pointer;
-    font-size: 20px;
-    font-weight: bold;
-    color: #FBF1DE;
-    margin: 10px 5px;
-}
-
-.m_gnb {
-    width: 100%;
-    margin-top: 10px;
-}
-
-.m_gnb li {
-    text-align: right;
-    margin-bottom: 40px;
-    background-position: center left;
-    background-repeat: no-repeat;
-}
-
-.m_gnb li:nth-child(1) {
-    background-image: url(../images/header/icon_login.svg);
-}
-
-.m_gnb li:nth-child(2) {
-    background-image: url(../images/header/icon_brand.svg);
-}
-
-.m_gnb li:nth-child(3) {
-    background-image: url(../images/header/icon_subscripton.svg);
-}
-
-.m_gnb li:nth-child(4) {
-    background-image: url(../images/header/icon_evnet.svg);
-}
-
-.m_gnb li:nth-child(5) {
-    background-image: url(../images/header/icon_support.svg);
-}
-
-/* visual */
-#visual {
-    background-color: #B59073;
-    overflow: hidden;
-    box-shadow: 0 5px 5px rgba(0, 0, 0, 0.4) inset;
-    background-size: 1088px;
-}
-
-.inner_visual {
-    width: 1320px;
-    height: 800px;
-    margin: 0 auto;
-    display: flex;
-    align-items: center;
-    position: relative;
-}
-
-.visual_txt {
-    font-family: "Noto Sans KR", sans-serif;
-}
-
-.visual_txt h2 {
-    color: #FFAA39;
-    font-size: 150px;
-    font-weight: bold;
-    margin-bottom: 105px;
-}
-
-.visual_txt p {
-    color: #FFFAF5;
-    font-size: 24px;
-    line-height: 36px;
-}
-
-.visual_back {
-    width: 1088px;
-    position: absolute;
-    top: 110px;
-    right: -120px;
-    z-index: 1;
-}
-
-.object {
-    position: absolute;
-}
-
-.object_01 {
-    bottom: 255px;
-    right: 78px;
-    width: 175px;
-    z-index: 2;
-    animation: leaf_right 20s ease-in-out infinite 0.3s;
-}
-
-.object_02 {
-    bottom: 268px;
-    right: 46px;
-    width: 205px;
-    z-index: 3;
-    animation: leaf_right 20s ease-in-out infinite 0.6s;
-}
-
-.object_03 {
-    bottom: 275px;
-    left: 387px;
-    width: 175px;
-    z-index: 3;
-    animation: leaf_left 20s ease-in-out infinite 0.6s;
-}
-
-.object_04 {
-    bottom: 310px;
-    left: 400px;
-    width: 180px;
-    z-index: 2;
-    animation: leaf_left 20s ease-in-out infinite 0.9s;
-}
-
-.object_05 {
-    bottom: 308px;
-    left: 585px;
-    width: 175px;
-    z-index: 2;
-    animation: leaf_left 20s ease-in-out infinite 0.3s;
-}
-
-@keyframes leaf_right {
-
-    0%,
-    100% {
-        transform: rotate(0deg);
-    }
-
-    10%,
-    30%,
-    50%,
-    70% {
-        transform: rotate(1deg);
-        transform-origin: left bottom;
-    }
-
-    20%,
-    40%,
-    60% {
-        transform: rotate(-1deg);
-        transform-origin: left bottom;
-    }
-
-    80% {
-        transform: rotate(1.5deg);
-        transform-origin: left bottom;
-    }
-
-    90% {
-        transform: rotate(-1.5deg);
-        transform-origin: left bottom;
-    }
-}
-
-@keyframes leaf_left {
-
-    0%,
-    100% {
-        transform: rotate(0deg);
-    }
-
-    10%,
-    30%,
-    50%,
-    70% {
-        transform: rotate(1deg);
-        transform-origin: right bottom;
-    }
-
-    20%,
-    40%,
-    60% {
-        transform: rotate(-1deg);
-        transform-origin: right bottom;
-    }
-
-    80% {
-        transform: rotate(1.5deg);
-        transform-origin: right bottom;
-    }
-
-    90% {
-        transform: rotate(-1.5deg);
-        transform-origin: right bottom;
-    }
-}
-
-.visual_front {
-    width: 700px;
-    position: absolute;
-    bottom: 125px;
-    right: 120px;
-    z-index: 9;
-}
-
-#container {
-    overflow: hidden;
-}
-
-#container h2 {
-    font-size: 35px;
-    line-height: 45px;
-}
-
-#container p {
-    font-weight: 500;
-    letter-spacing: -0.5px;
-}
-
-/* section1 */
-#section_1_banner {
-    height: 250px;
-    position: relative;
-    overflow: hidden;
-}
-
-.slide_banner {
-    height: 250px;
-    position: absolute;
-    top: 0px;
-}
-
-.slide_banner_left {
-    left: 0;
-    z-index: -2;
-    background-color: #9A7C5D;
-    border-radius: 0 30rem 30rem 0;
-    width: 75%;
-}
-
-.slide_banner_right {
-    right: 0;
-    z-index: -1;
-    background-color: #C18343;
-    border-radius: 30rem 0 0 30rem;
-    width: 30%;
-}
-
-.divide_box {
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 125px;
-    width: 100%;
-    z-index: -99;
-    background-color: #B59073;
-}
-
-.inner_section1 {
-    width: 1320px;
-    margin: 0 auto;
-    height: 250px;
-    display: flex;
-    align-items: center;
-}
-
-.inner_section1 h2 {
-    z-index: 1;
-    color: #FBF1DE;
-    font-size: 40px;
-}
-
-.section1_img {
-    position: absolute;
-    bottom: 20px;
-    right: 23.5%;
-    width: 200px;
-    height: 170px;
-    filter: drop-shadow(0 0 8px rgba(119, 64, 19, 0.35));
-    z-index: 1;
-    animation: upDownIcon 2s ease-in-out infinite;
-}
-
-@keyframes upDownIcon {
-    0% {
-        transform: translateY(8px);
-    }
-
-    50% {
-        transform: translateY(0);
-    }
-
-    100% {
-        transform: translateY(8px);
-    }
-}
-
-/* section2 */
-#section_2_subscription_intro {
-    width: 1320px;
-    margin: 160px auto;
-    text-align: center;
-}
-
-.intro_subs {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-}
-
-.intro_subs li {
-    width: 30.7%;
-    height: 500px;
-    background-color: #CBB798;
-    border-radius: 50px;
-    padding: 40px;
-    box-sizing: border-box;
-    position: relative;
-    transition: all 0.5s;
-}
-
-.intro_subs li:hover {
-    transform: translateY(-80px);
-}
-
-.section2_img {
-    margin-top: 10px;
-    height: 150px;
-}
-
-.section2_txt h2 {
-    margin: 20px 0;
-}
-
-.link_btn_pc {
-    position: absolute;
-    bottom: 40px;
-    left: 50%;
-    margin-left: -80px;
-    display: inline-block;
-    width: 160px;
-    height: 45px;
-    background-color: #3B2722;
-    border-radius: 15px;
-    color: #FBF1DE;
-    padding-top: 10px;
-    box-sizing: border-box;
-}
-
-.link_btn_pc:hover {
-    background-color: #FFF3D9;
-    color: #3B2722;
-    font-weight: bold;
-}
-
-/* section3 */
-#section_3_book_intro {
-    overflow: hidden;
-}
-
-.inner_section3 {
-    width: 1320px;
-    margin: 0px auto;
-    margin-bottom: 160px;
-    height: 1260px;
-    position: relative;
-}
-
-.section3_content {
-    position: absolute;
-}
-
-.title p {
-    margin: 20px 0 40px;
-}
-
-.title_r {
-    text-align: right;
-}
-
-.title_l {
-    text-align: left;
-}
-
-.content_left {
-    top: 195px;
-    left: 0;
-}
-
-.content_right {
-    bottom: 0;
-    right: 0;
-}
-
-.slide_wrap {
-    position: absolute;
-    height: 500px;
-    background-color: #C59977;
-    width: 1200px;
-}
-
-#slide {
-    width: 800px;
-    height: 300px;
-    margin: 0 auto;
-    overflow: hidden;
-    padding-top: 110px;
-    color: #FBF1DE;
-}
-
-#slide ul li a {
-    display: block;
-    margin: 5px;
-}
-
-.screen {
-    width: 170px;
-    height: 240px;
-    box-shadow: 5px 5px 5px rgba(119, 64, 19, 1);
-    position: relative;
-    overflow: hidden;
-    border-radius: 10px;
-}
-
-.screen img {
-    width: 100%;
-    display: block;
-}
-
-.swiper-slide p {
-    margin-top: 8px;
-}
-
-.swiper-slide strong {
-    letter-spacing: 0.5px;
-}
-
-.swiper-slide span {
-    display: block;
-    font-size: 14px;
-    font-weight: 400;
-}
-
-.swiper-slide-active+.swiper-slide+.swiper-slide .bottom {
-    bottom: 0%;
-}
-
-.swiper-slide,
-.swiper-slide-active {
-    transform: translateY(0px);
-    transition: transform 1s;
-}
-
-.swiper-slide-active+.swiper-slide+.swiper-slide,
-.swiper-slide-active {
-    transform: translateY(-50px);
-}
-
-.swiper-slide-active.swiper-slide.swiper-slide,
-.swiper-slide-active {
-    transform: translateY(-50px);
-}
-
-.swiper-button-prev {
-    left: 10px;
-}
-
-.swiper-button-next {
-    left: 10px;
-}
-
-.swiper-button-prev:hover {
-    transform: scale(1.15);
-}
-
-.swiper-button-next,
-.swiper-button-prev {
-    content: "";
-    background-color: #FBF1DE;
-    width: 45px;
-    height: 45px;
-    transition: all 0.5s;
-    box-shadow: 0 0 10px rgba(68, 54, 43, 0.4);
-}
-
-.swiper-button-next:hover {
-    transform: scale(1.15);
-}
-
-.slide_left {
-    bottom: 0;
-    left: -300px;
-    border-radius: 0 30rem 30rem 0;
-}
-
-.slide_right {
-    top: 0;
-    right: -300px;
-    border-radius: 30rem 0 0 30rem;
-}
-
-#section_3_book_intro_m {
-    display: none;
-}
-
-.slide_wrap_r {
-    display: flex;
-    justify-content: flex-end;
-}
-
-.slide_wrap_l {
-    display: flex;
-    justify-content: flex-start;
-}
-
-#slide_m {
-    height: 400px;
-    background-color: #C59977;
-    width: 100%;
-    position: relative;
-    margin-bottom: 40px;
-}
-
-
-.multiple-items {
-    position: absolute;
-    top: 50%;
-    margin-top: -128px;
-    width: 90%;
-    color: #FBF1DE;
-}
-
-.multiple-items p {
-    margin-top: 8px;
-}
-
-.multiple-items span {
-    display: block;
-    font-size: 14px;
-    font-weight: 400;
-}
-
-.slick_r {
-    left: 12%;
-}
-
-.slick_l {
-    left: 12%;
-}
-
-.screen_m {
-    width: 133px;
-    height: 196px;
-    box-shadow: 5px 5px 5px rgba(119, 64, 19, 1);
-    position: relative;
-    overflow: hidden;
-    border-radius: 10px;
-}
-
-.screen_m img {
-    height: 100%;
-    width: 100%;
-    display: block;
-}
-
-/* section4 */
-#section_4_app_intro {
-    width: 1320px;
-    height: 450px;
-    margin: 0px auto;
-    margin-bottom: 160px;
-    position: relative;
-    padding-left: 190px;
-    box-sizing: border-box;
-}
-
-#section_4_app_intro>div:nth-child(1) {
-    position: absolute;
-    top: 0;
-    left: 0;
-}
-
-.app_btn {
-    width: 120px;
-    height: 120px;
-    background-repeat: no-repeat;
-    background-position: center;
-    padding: 15px;
-    box-sizing: border-box;
-    cursor: pointer;
-    font-size: 18px;
-    line-height: 18px;
-    filter: drop-shadow(3px 3px 3px rgba(0, 0, 0, 0.35));
-}
-
-.app_btn_pc {
-    position: absolute;
-}
-
-.btn_calender {
-    bottom: 240px;
-    left: 330px;
-    color: #216D5E;
-    background-image: url(../images/main_images/section_4_app_intro/icon_calender.png);
-}
-
-.btn_editor_choice {
-    bottom: 240px;
-    right: 175px;
-    color: #785840;
-    background-image: url(../images/main_images/section_4_app_intro/icon_editor_choice.png);
-}
-
-.btn_bookshelf {
-    bottom: 30px;
-    left: 270px;
-    color: #3B2722;
-    background-image: url(../images/main_images/section_4_app_intro/icon_bookshelf.png);
-}
-
-.btn_heyum_pick {
-    bottom: 30px;
-    right: 115px;
-    color: #98671D;
-    background-image: url(../images/main_images/section_4_app_intro/icon_heyum_pick.png);
-}
-
-.section4_img_wrap {
-    position: relative;
-    width: 380px;
-    margin: 0 auto;
-    height: 100%;
-    filter: drop-shadow(15px 15px 25px rgba(0, 0, 0, 0.4));
-}
-
-.section4_img {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    background-position: center;
-    background-repeat: no-repeat;
-    width: 380px;
-    height: 441px;
-}
-
-.app_btn_wrap_m {
-    display: none;
-}
-
-.app_calendar {
-    z-index: 1;
-    background-image: url(../images/main_images/section_4_app_intro/app_calender.png);
-}
-
-.app_choice {
-    background-image: url(../images/main_images/section_4_app_intro/app_editor_choice.png);
-}
-
-.app_bookshlef {
-    background-image: url(../images/main_images/section_4_app_intro/app_bookshelf.png);
-}
-
-.app_pick {
-    background-image: url(../images/main_images/section_4_app_intro/app_heyum_pick.png);
-}
-
-/* section5 */
-#section_5_banner_sub {
-    width: 1920px;
-    height: 400px;
-    margin: 0px auto;
-    margin-bottom: 80px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    background: url(../images/main_images/section_5_banner_sub/banner_sub.svg)no-repeat center;
-}
-
-.sub_banner_txt {
-    font-size: 50px;
-    line-height: 60px;
-    text-align: center;
-    font-family: 'RIDIBatang';
-    font-weight: 500;
-}
-
-.sub_banner_txt_m {
-    display: none;
-}
-
-/* section6 */
-#section_6_review {
-    position: relative;
-}
-
-#section_6_review::before {
-    background: url(../images/main_images/section_6_review/review_bg.svg)no-repeat center;
-    z-index: -1;
-    position: absolute;
-    bottom: -80px;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    content: "";
-    opacity: 0.6;
-}
-
-.inner_section6 {
-    width: 1320px;
-    height: 770px;
-    margin: 0px auto;
-}
-
-.inner_section6 .title p {
-    margin: 20px 0 0;
-}
-
-.review_wrap {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    height: 490px;
-}
-
-.review_wrap>li,
-.review_slide {
-    background-color: #FFFAF5;
-    box-sizing: border-box;
-    box-shadow: 0 0 20px rgba(68, 54, 43, 0.4);
-
-}
-
-.review_wrap>li {
-    height: 450px;
-    width: 22%;
-    padding: 20px;
-    transition: all 0.5s;
-}
-
-.review_wrap>li:hover {
-    transform: scale(1.05);
-}
-
-.review_wrap h3,
-.review_slide_wrap h3 {
-    padding-left: 32px;
-    font-size: 15px;
-    margin-bottom: 10px;
-    background-position: center left;
-    background-repeat: no-repeat;
-}
-
-.review_wrap>li:nth-child(1),
-.review_wrap>li:nth-child(3) {
-    align-self: flex-end;
-}
-
-.review_wrap li:nth-child(1) h3,
-.person_1 {
-    background-image: url(../images/main_images/section_6_review/reviewer_mae.png);
-}
-
-.review_wrap>li:nth-child(2) h3,
-.person_2 {
-    background-image: url(../images/main_images/section_6_review/reviewer_bae.png);
-}
-
-.review_wrap>li:nth-child(3) h3,
-.person_3 {
-    background-image: url(../images/main_images/section_6_review/reviewer_gregg.png);
-}
-
-.review_wrap>li:nth-child(4) h3,
-.person_4 {
-    background-image: url(../images/main_images/section_6_review/reviewer_angus.png);
-}
-
-.review_content {
-    background: url(../images/main_images/section_6_review/btn_bookmark.svg) no-repeat top 8px right;
-    font-size: 14px;
-    line-height: 18px;
-    position: relative;
-}
-
-.review_content span {
-    font-weight: bold;
-    letter-spacing: -1px;
-}
-
-.review_content ul {
-    display: flex;
-}
-
-.review_content ul li {
-    margin: 10px 5px 10px;
-}
-
-.hash_tag {
-    position: absolute;
-    bottom: -30px;
-    left: 0;
-    color: #4D6CC2;
-}
-
-.hash_tag_m {
-    margin-top: 10px;
-    color: #4D6CC2;
-}
-
-#section_6_review_m {
-    display: none;
-}
-
-.review_slide_wrap {
-    width: 100vw;
-}
-
-.review_slide {
-    width: 65vw;
-    margin: 50px;
-    padding: 20px;
-}
-
-/* footer */
-#footer {
-    background-color: #3B2722;
-}
-
-.inner_footer {
-    color: #FFFAF5;
-    font-size: 14px;
-    text-align: left;
-    width: 1320px;
-    margin: 0 auto;
-    height: 280px;
-    display: flex;
-    position: relative;
-    align-items: center;
-    flex-wrap: wrap;
-}
-
-.footer_txt {
-    margin-left: 40px;
-}
-
-.footer_txt p:nth-child(2) {
-    margin: 20px 0;
-}
-
-.footer_menu {
-    display: flex;
-}
-
-.footer_menu li a {
-    display: inline-block;
-    margin-right: 10px;
-}
-
-.footer_menu li::before {
-    content: "";
-    display: inline-block;
-    width: 1px;
-    height: 11px;
-    margin-right: 10px;
-    background-color: #FFFAF5;
-    vertical-align: 0px;
-}
-
-.footer_menu li:nth-child(1)::before {
-    display: none;
-}
-
-.footer_menu span {
-    font-weight: bold;
-}
-
-.footer_menu li a:hover {
-    color: #FFAA39;
-}
-
-.sns_link {
-    position: absolute;
-    top: 50px;
-    right: 0;
-    display: flex;
-}
-
-.sns_link li a {
-    display: block;
-    margin-left: 15px;
-    opacity: 0.5;
-}
-
-.sns_link li a:hover {
-    opacity: 1.0;
-}
-
-.sns_link_m {
-    display: none;
-}
-
-.sns_link_m ul {
-    display: flex;
-    align-items: center;
-    height: 36px;
-}
-
-.sns_link_m ul li {
-    display: inline-block;
-    margin: 0 5px;
-}
-
-.sns_link_m img {
-    display: block;
-}
-
-/* top_btn */
-#top_btn {
-    width: 60px;
-    height: 60px;
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: fixed;
-    right: 30px;
-    bottom: 30px;
-    background: #CBB798 url(../images/top_btn.svg) no-repeat center top 7px;
-    background-size: 20px 20px;
-    font-size: 15px;
-    cursor: pointer;
-    z-index: 99;
-    box-sizing: border-box;
-    font-weight: bold;
-    padding-top: 15px;
-    opacity: 0.7;
-}
-
-@media(max-width:430px) {
-    body {
-        background-color: transparent;
-    }
-
-    #header,
-    .visual_pc,
-    #section_1_banner,
-    #section_3_book_intro,
-    .sub_banner_txt,
-    #section_6_review,
-    .footer_logo,
-    #top_btn,
-    .sns_link,
-    .footer_menu li::before,
-    .footer_txt p:nth-child(3) {
-        display: none;
-    }
-
-    .inner_visual,
-    #section_2_subscription_intro,
-    #section_4_app_intro,
-    #section_5_banner_sub,
-    .inner_footer {
-        width: 100%;
-    }
-
-    .title {
-        text-align: center;
-    }
-
-    #m_nav {
-        display: block;
-    }
-
-    #visual {
-        box-shadow: none;
-    }
-
-    .visual_mobile {
-        display: block;
-    }
-
-    .visual_txt {
-        text-align: center;
-    }
-
-    .visual_txt h2 {
-        color: white;
-    }
-
-    .inner_visual {
-        background: url(../images/main_images/visual_main/visual_m.jpg) no-repeat center;
-        width: 100%;
-        background-size: cover;
-        display: flex;
-        justify-content: center;
-    }
-
-    .intro_subs {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    #section_2_subscription_intro {
-        margin: 40px auto;
-    }
-
-    .intro_subs li {
-        width: 85vw;
-        height: 350px;
-        border-radius: 50px;
-        padding: 40px;
-        margin-bottom: 40px;
-        /* pointer-events: none; */
-    }
-    .intro_subs li:hover {
-        transform: none;
-    }
-    .link_btn_pc:hover {
-        background-color: #FFF3D9;
-        color: #3B2722;
-        font-weight: bold;
-    }
-    #container h2 {
-        font-size: 24px;
-        line-height: 30px;
-    }
-    .section2_txt>h2{
-        letter-spacing: -1px;
-    }
-
-    .section2_txt>p {
-        font-size: 16px;
-        line-height: 20px;
-    }
-
-    .section2_img {
-        margin-top: 0px;
-        height: 70px;
-        width: 50px;
-        display: inline-block;
-        text-align: center;
-    }
-
-    .section2_img img {
-        width: 100%;
-
-    }
-
-    .link_btn_pc {
-        bottom: 30px;
-    }
-
-    #section_3_book_intro_m {
-        display: block;
-    }
-
-    #section_4_app_intro {
-        height: 600px;
-        margin: 0px auto;
-        margin-bottom: 80px;
-        padding-left: 0;
-    }
-
-    #section_4_app_intro>div:nth-child(1) {
-        position: absolute;
-        top: 0;
-        left: 50%;
-        margin-left: -111px;
-    }
-
-    .section4_img_wrap {
-        width: 100%;
-    }
-
-    .section4_img {
-        width: 292px;
-        position: absolute;
-        top: 15%;
-        left: 50%;
-        margin-left: -146px;
-        background-size: contain;
-    }
-
-    .app_btn_wrap {
-        display: none;
-    }
-
-    .app_btn_wrap_m {
-        display: block;
-        display: flex;
-        justify-content: space-between;
-        width: 292px;
-        position: absolute;
-        bottom: 20px;
-        left: 50%;
-        margin-left: -146px;
-    }
-
-    .app_btn {
-        width: 55px;
-        height: 55px;
-        background-size: contain;
-        padding: 0;
-        font-size: 16px;
-        line-height: 18px;
-        filter: drop-shadow(3px 3px 3px rgba(0, 0, 0, 0.35));
-    }
-
-    .app_btn_m {
-        z-index: 99;
-    }
-
-    .btn_calender {
-        color: #216D5E;
-        background-image: url(../images/main_images/section_4_app_intro/icon_calender.png);
-    }
-
-    .btn_editor_choice {
-        color: #785840;
-        background-image: url(../images/main_images/section_4_app_intro/icon_editor_choice.png);
-    }
-
-    .btn_bookshelf {
-        color: #3B2722;
-        background-image: url(../images/main_images/section_4_app_intro/icon_bookshelf.png);
-    }
-
-    .btn_heyum_pick {
-        color: #98671D;
-        background-image: url(../images/main_images/section_4_app_intro/icon_heyum_pick.png);
-    }
-
-    .app_btn_txt {
-        padding: 0;
-        padding-top: 65px;
-        text-align: center;
-        width: 100%;
-    }
-
-    .app_btn_txt span {
-        display: block;
-    }
-
-    .sub_banner_txt {
-        display: none;
-    }
-
-    .sub_banner_txt_m {
-        display: block;
-        font-size: 24px;
-        line-height: 34px;
-        padding-left: 10px;
-    }
-
-    #section_5_banner_sub {
-        height: 200px;
-        background-position: center right;
-        background-size: cover;
-        align-items: flex-start;
-    }
-
-    #section_6_review_m {
-        display: block;
-    }
-
-    .review_pic {
-        width: 100%;
-    }
-
-    .review_pic img {
-        width: 100%;
-    }
-
-    .sns_link_m {
-        display: block;
-    }
-    .inner_footer {
-        box-sizing: border-box;
-        font-size: 12px;
-        display: flex;
-        justify-content: center;
-    }
-
-    .footer_txt {
-        margin-left: 0;
-    }
-    .footer_txt p:nth-child(2){
-        text-align: center;
-    }
-    .footer_menu li a {
-        pointer-events: none;
-    }
-}
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>혜윰</title>
+    <!-- favicon -->
+    <link rel="shortcut icon" href="images/favicon32x32.png" type="image/x-icon">
+    <!-- webfont -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" as="style" crossorigin
+        href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable.min.css" />
+    <!-- css -->
+    <link rel="stylesheet" href="css/style_main.css">
+    <!-- aos css -->
+    <!-- <link rel="stylesheet" href="css/aos.css"> -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- swiper css -->
+    <link rel="stylesheet" href="css/swiper-bundle.min.css">
+    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" /> -->
+    <!-- slick css -->
+     <!-- <link rel="stylesheet" href="css/slick.css"> -->
+     <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+</head>
+
+<body>
+    <div id="wrap">
+        <div id="header">
+            <!-- pc -->
+            <div class="header_top">
+                <h1 class="logo">
+                    <a href="./index.html">
+                        <img src="./images/header/logo.svg" alt="logo">
+                    </a>
+                </h1>
+                <ul class="util">
+                    <li>
+                        <a href="javascript:return false;">로그인</a>
+                    </li>
+                    <li>
+                        <a href="javascript:return false;">회원가입</a>
+                    </li>
+                    <li>
+                        <a href="javascript:return false;">마이페이지</a>
+                    </li>
+                </ul>
+                <div class="modal">
+                    <div class="popup">
+                        <div class="id_wrap">
+                            <form action="#">
+                                <input type="text" placeholder="사용자 이름">
+                            </form>
+                        </div>
+                        <div class="pw_wrap">
+                            <form action="#">
+                                <input type="password" placeholder="비밀번호">
+                            </form>
+                        </div>
+                        <button class="btn_login">로그인</button>
+                        <ul>
+                            <li>
+                                <a href="javascript:return false;">비밀번호 찾기</a>
+                            </li>
+                            <li>
+                                <a href="javascript:return false;">아이디 찾기</a>
+                            </li>
+                            <li>
+                                <a href="javascript:return false;">회원가입</a>
+                            </li>
+                        </ul>
+                        <button class="btn_close"><img src="./images/header/btn_close.svg" alt="btn_close"></button>
+                    </div>
+                </div>
+            </div>
+            <div class="header_bot">
+                <!-- pc -->
+                <div class="gnb_wrap">
+                    <ul class="gnb">
+                        <li>
+                            <a href="./sub/sub_01_brand.html">BRAND</a>
+                        </li>
+                        <li>
+                            <a href="./sub/sub_02_subscriptions.html">SUBSCRIPTIONS</a>
+                        </li>
+                        <li>
+                            <a href="./sub/sub_03_event.html">EVENT</a>
+                        </li>
+                        <li>
+                            <a href="./sub/sub_04_support.html">SUPPORT</a>
+                        </li>
+                    </ul>
+                    <div class="submenu">
+                        <div class="inner_submenu">
+                            <ul>
+                                <li>
+                                    <a href="./sub/sub_01_brand.html#section_1_brand_identity">Brand Identity</a>
+                                </li>
+                                <li>
+                                    <a href="./sub/sub_01_brand.html#section_2_brand_principle">Brand Principle</a>
+                                </li>
+                                <li>
+                                    <a href="./sub/sub_01_brand.html#section3_brand_philosophy">Brand Philosophy</a>
+                                </li>
+                            </ul>
+                            <ul>
+                                <li>
+                                    <a href="./sub/sub_02_subscriptions.html#section_2_service_tab">All
+                                        Subscripstions</a>
+                                </li>
+                                <li>
+                                    <a href="./sub/sub_02_subscriptions.html#section_3_membership">Membership</a>
+                                </li>
+                            </ul>
+                            <ul>
+                            </ul>
+                            <ul>
+                                <li>
+                                    <a href="./sub/sub_04_support.html">Notice & FAQ</a>
+                                </li>
+                                <li>
+                                    <a href="./sub/sub_04_support.html">Contact</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- mobile -->
+        <div id="m_nav">
+            <div class="hamberger_wrap">
+                <a href="#" class="open_btn">
+                    <img src="./images/header/gnb_btn.svg" alt="hamberger">
+                </a>
+            </div>
+            <div class="m_gnb_wrap">
+                <p>
+                    <button class="close_btn">X</button>
+                </p>
+                <ul class="m_gnb">
+                    <li>
+                        <a href="#">LOGIN</a>
+                    </li>
+                    <li>
+                        <a href="./sub/sub_01_brand.html">BRAND</a>
+                    </li>
+                    <li>
+                        <a href="./sub/sub_02_subscriptions.html">SUBSCRIPTIONS</a>
+                    </li>
+                    <li>
+                        <a href="./sub/sub_03_event.html">EVENT</a>
+                    </li>
+                    <li>
+                        <a href="./sub/sub_04_support.html">SUPPORT</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div id="visual">
+            <div class="inner_visual">
+                <div class="visual_txt">
+                    <h2>혜윰</h2>
+                    <p>
+                        당신을 기다리고 있는
+                        <br>일상의 설레임과 삶의 영감
+                        <br>혜윰과 함께 탐구해보세요
+                    </p>
+                </div>
+                <div class="visual_pc">
+                    <div class="visual_back">
+                        <img src="./images/main_images/visual_main/visual_back.svg" alt="visual">
+                    </div>
+                    <div class="visual_front">
+                        <img src="./images/main_images/visual_main/visual_front.svg" alt="visual">
+                    </div>
+                    <div class="object object_01">
+                        <img src="./images/main_images/visual_main/object_01.svg" alt="object_01">
+                    </div>
+                    <div class="object object_02">
+                        <img src="./images/main_images/visual_main/object_02.svg" alt="object_02">
+                    </div>
+                    <div class="object object_03">
+                        <img src="./images/main_images/visual_main/object_03.svg" alt="object_03">
+                    </div>
+                    <div class="object object_04">
+                        <img src="./images/main_images/visual_main/object_04.svg" alt="object_04">
+                    </div>
+                    <div class="object object_05">
+                        <img src="./images/main_images/visual_main/object_05.svg" alt="object_05">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="container">
+            <div id="section_1_banner">
+                <div class="slide_banner slide_banner_left" data-aos="slide-right" data-aos-duration="1200"
+                    data-aos-easing="ease-in-out" data-aos-delay="50">
+                </div>
+                <div class="slide_banner slide_banner_right" data-aos="slide-left" data-aos-duration="1200"
+                    data-aos-easing="ease-in-out" data-aos-delay="50">
+                </div>
+                <div class="divide_box"></div>
+                <div class="section1_img" data-aos="fade" data-aos-duration="2000" data-aos-easing="ease-in-out"
+                    data-aos-once="false">
+                    <img src="./images/main_images/section_1_banner/logo_banner.svg" alt="logo_banner">
+                </div>
+                <div class="inner_section1" data-aos="fade" data-aos-duration="2000" data-aos-easing="ease-in-out"
+                    data-aos-once="false" data-aos-delay="50">
+                    <h2>혜윰과 함께하는 즐거운 독서생활</h2>
+                </div>
+            </div>
+            <div id="section_2_subscription_intro">
+                <ul class="intro_subs">
+                    <li>
+                        <div class="section2_img">
+                            <img src="./images/main_images/section_2_subscription_intro/icon_subscription.png"
+                                alt="icon_subscription">
+                        </div>
+                        <div class="section2_txt">
+                            <h2>
+                                사용자 친화적인
+                                <br>무제한 독서 라이프
+                            </h2>
+                            <p>
+                                쉽고 빠르게 언제 어디서나 혜윰의
+                                <br>다양한 문화 컨텐츠를 누려보세요
+                            </p>
+                        </div>
+                        <a href="./sub/sub_02_subscriptions.html#section_2_service_tab" class="link_btn link_btn_pc">구독
+                            바로가기</a>
+                    </li>
+                    <li>
+                        <div class="section2_img">
+                            <img src="./images/main_images/section_2_subscription_intro/icon_event.png"
+                                alt="icon_event">
+                        </div>
+                        <div class="section2_txt">
+                            <h2>
+                                1년 365일 마르지 않는
+                                <br>즐거운 축제의 샘
+                            </h2>
+                            <p>
+                                독서를 더 재미있게 즐길 수 있는
+                                <br>가지각색의 이벤트
+                            </p>
+                        </div>
+                        <a href="./sub/sub_03_event.html" class="link_btn link_btn_pc">이벤트 바로가기</a>
+                    </li>
+                    <li>
+                        <div class="section2_img">
+                            <img src="./images/main_images/section_2_subscription_intro/icon_membership.png"
+                                alt="icon_membership">
+                        </div>
+                        <div class="section2_txt">
+                            <h2>
+                                혜윰 독자들을
+                                <br>위한 다양한 혜택
+                            </h2>
+                            <p>
+                                사은품에서부터 할인까지,
+                                <br>고객들의 성원에 보답하는 멤버쉽
+                            </p>
+                        </div>
+                        <a href="./sub/sub_02_subscriptions.html#section_3_membership" class="link_btn link_btn_pc">멤버쉽
+                            바로가기</a>
+                    </li>
+                </ul>
+            </div>
+            <div id="section_3_book_intro">
+                <div class="inner_section3">
+                    <div class="slide_wrap slide_left">
+                        <div id="slide" class="swiper-container">
+                            <div class="swiper-wrapper">
+                                <ul class="swiper-slide">
+                                    <li><a href="javascript:return false;">
+                                            <div class="screen">
+                                                <img src="./images/main_images/section_3_book_intro/book_slide_bot_01.jpg"
+                                                    alt="book_slide_bot_01">
+                                            </div>
+                                            <p>
+                                                눈물을 마시는 새
+                                                <span>이영도</span>
+                                            </p>
+                                        </a>
+                                    </li>
+                                </ul>
+                                <ul class="swiper-slide">
+                                    <li><a href="javascript:return false;">
+                                            <div class="screen">
+                                                <img src="./images/main_images/section_3_book_intro/book_slide_bot_02.jpg"
+                                                    alt="book_slide_bot_02">
+                                            </div>
+                                            <p>
+                                                삼체
+                                                <span>류츠신</span>
+                                            </p>
+                                        </a>
+                                    </li>
+                                </ul>
+                                <ul class="swiper-slide">
+                                    <li><a href="javascript:return false;">
+                                            <div class="screen">
+                                                <img src="./images/main_images/section_3_book_intro/book_slide_bot_03.jpg"
+                                                    alt="book_slide_bot_03">
+                                            </div>
+                                            <p>
+                                                멋진 징조들
+                                                <span>테리 프레쳇, 닐 게이먼</span>
+                                            </p>
+                                        </a>
+                                    </li>
+                                </ul>
+                                <ul class="swiper-slide">
+                                    <li><a href="javascript:return false;">
+                                            <div class="screen">
+                                                <img src="./images/main_images/section_3_book_intro/book_slide_bot_04.jpg"
+                                                    alt="book_slide_bot_04">
+                                            </div>
+                                            <p>
+                                                듄
+                                                <span>프랭크 허버트</span>
+                                            </p>
+                                        </a>
+                                    </li>
+                                </ul>
+                                <ul class="swiper-slide">
+                                    <li><a href="javascript:return false;">
+                                            <div class="screen">
+                                                <img src="./images/main_images/section_3_book_intro/book_slide_bot_05.jpg"
+                                                    alt="book_slide_bot_05">
+                                            </div>
+                                            <p>
+                                                위쳐
+                                                <span>안제이 사프콥스키</span>
+                                            </p>
+                                        </a>
+                                    </li>
+                                </ul>
+                                <ul class="swiper-slide">
+                                    <li><a href="javascript:return false;">
+                                            <div class="screen">
+                                                <img src="./images/main_images/section_3_book_intro/book_slide_bot_06.jpg"
+                                                    alt="book_slide_bot_06">
+                                            </div>
+                                            <p>
+                                                유혹하는 글쓰기
+                                                <span>스티븐 킹</span>
+                                            </p>
+                                        </a>
+                                    </li>
+                                </ul>
+                                <ul class="swiper-slide">
+                                    <li><a href="javascript:return false;">
+                                            <div class="screen">
+                                                <img src="./images/main_images/section_3_book_intro/book_slide_bot_07.jpg"
+                                                    alt="book_slide_bot_07">
+                                            </div>
+                                            <p>
+                                                한밤의 모험
+                                                <span>발터 뫼르스</span>
+                                            </p>
+                                        </a>
+                                    </li>
+                                </ul>
+                                <ul class="swiper-slide">
+                                    <li><a href="javascript:return false;">
+                                            <div class="screen">
+                                                <img src="./images/main_images/section_3_book_intro/book_slide_bot_08.jpg"
+                                                    alt="book_slide_bot_08">
+                                            </div>
+                                            <p>
+                                                꿈꾸는 책들의 미로
+                                                <span>발터 뫼르스</span>
+                                            </p>
+                                        </a>
+                                    </li>
+                                </ul>
+                                <ul class="swiper-slide">
+                                    <li><a href="javascript:return false;">
+                                            <div class="screen">
+                                                <img src="./images/main_images/section_3_book_intro/book_slide_bot_09.jpg"
+                                                    alt="book_slide_bot_09">
+                                            </div>
+                                            <p>
+                                                노변의 피크닉
+                                                <span>스투르가츠키</span>
+                                            </p>
+                                        </a>
+                                    </li>
+                                </ul>
+                                <ul class="swiper-slide">
+                                    <li><a href="javascript:return false;">
+                                            <div class="screen">
+                                                <img src="./images/main_images/section_3_book_intro/book_slide_bot_10.jpg"
+                                                    alt="book_slide_bot_10">
+                                            </div>
+                                            <p>
+                                                눈먼 시계공
+                                                <span>리처드 도킨스</span>
+                                            </p>
+                                        </a>
+                                    </li>
+                                </ul>
+                                <ul class="swiper-slide">
+                                    <li><a href="javascript:return false;">
+                                            <div class="screen">
+                                                <img src="./images/main_images/section_3_book_intro/book_slide_bot_11.jpg"
+                                                    alt="book_slide_bot_11">
+                                            </div>
+                                            <p>
+                                                보편의 단어
+                                                <span>이기주</span>
+                                            </p>
+                                        </a>
+                                    </li>
+                                </ul>
+                                <ul class="swiper-slide">
+                                    <li><a href="javascript:return false;">
+                                            <div class="screen">
+                                                <img src="./images/main_images/section_3_book_intro/book_slide_bot_12.jpg"
+                                                    alt="book_slide_bot_12">
+                                            </div>
+                                            <p>
+                                                불변의 법칙
+                                                <span>모건 하우절</span>
+                                            </p>
+                                        </a>
+                                    </li>
+                                </ul>
+                                <ul class="swiper-slide">
+                                    <li><a href="javascript:return false;">
+                                            <div class="screen">
+                                                <img src="./images/main_images/section_3_book_intro/book_slide_bot_13.jpg"
+                                                    alt="book_slide_bot_13">
+                                            </div>
+                                            <p>
+                                                만들어진 신
+                                                <span>리처드 도킨스</span>
+                                            </p>
+                                        </a>
+                                    </li>
+                                </ul>
+                                <ul class="swiper-slide">
+                                    <li><a href="javascript:return false;">
+                                            <div class="screen">
+                                                <img src="./images/main_images/section_3_book_intro/book_slide_bot_14.jpg"
+                                                    alt="book_slide_bot_14">
+                                            </div>
+                                            <p>
+                                                화씨 451
+                                                <span>레이 브래드버리</span>
+                                            </p>
+                                        </a>
+                                    </li>
+                                </ul>
+                                <ul class="swiper-slide">
+                                    <li><a href="javascript:return false;">
+                                            <div class="screen">
+                                                <img src="./images/main_images/section_3_book_intro/book_slide_bot_15.jpg"
+                                                    alt="book_slide_bot_15">
+                                            </div>
+                                            <p>
+                                                이기적 유전자
+                                                <span>리처드 도킨스</span>
+                                            </p>
+                                        </a>
+                                    </li>
+                                </ul>
+                                <ul class="swiper-slide">
+                                    <li><a href="javascript:return false;">
+                                            <div class="screen">
+                                                <img src="./images/main_images/section_3_book_intro/book_slide_bot_16.jpg"
+                                                    alt="book_slide_bot_16">
+                                            </div>
+                                            <p>
+                                                마흔에 읽는 쇼펜하우어
+                                                <span>강용수</span>
+                                            </p>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <!-- Add Arrows -->
+                            <div class="swiper-button-next"></div>
+                            <div class="swiper-button-prev"></div>
+                            <div class="swiper-pagination"></div>
+                        </div>
+                    </div>
+                    <div class="slide_wrap slide_right">
+                        <div id="slide" class="swiper-container">
+                            <div class="swiper-wrapper">
+                                <ul class="swiper-slide">
+                                    <li><a href="javascript:return false;">
+                                            <div class="screen">
+                                                <img src="./images/main_images/section_3_book_intro/book_slide_top_01.jpg"
+                                                    alt="book_slide_top_01">
+                                            </div>
+                                            <p>
+                                                총, 균, 쇠
+                                                <span>제레드 다이아몬드</span>
+                                            </p>
+                                        </a>
+                                    </li>
+                                </ul>
+                                <ul class="swiper-slide">
+                                    <li><a href="javascript:return false;">
+                                            <div class="screen">
+                                                <img src="./images/main_images/section_3_book_intro/book_slide_top_02.jpg"
+                                                    alt="book_slide_top_02">
+                                            </div>
+                                            <p>
+                                                창백한 푸른 점
+                                                <span>칼 세이건</span>
+                                            </p>
+                                        </a>
+                                    </li>
+                                </ul>
+                                <ul class="swiper-slide">
+                                    <li><a href="javascript:return false;">
+                                            <div class="screen">
+                                                <img src="./images/main_images/section_3_book_intro/book_slide_top_03.jpg"
+                                                    alt="book_slide_top_03">
+                                            </div>
+                                            <p>
+                                                코스모스
+                                                <span>칼 세이건</span>
+                                            </p>
+                                        </a>
+                                    </li>
+                                </ul>
+                                <ul class="swiper-slide">
+                                    <li><a href="javascript:return false;">
+                                            <div class="screen">
+                                                <img src="./images/main_images/section_3_book_intro/book_slide_top_04.jpg"
+                                                    alt="book_slide_top_04">
+                                            </div>
+                                            <p>
+                                                데미안
+                                                <span>헤르만 헤세</span>
+                                            </p>
+                                        </a>
+                                    </li>
+                                </ul>
+                                <ul class="swiper-slide">
+                                    <li><a href="javascript:return false;">
+                                            <div class="screen">
+                                                <img src="./images/main_images/section_3_book_intro/book_slide_top_05.jpg"
+                                                    alt="book_slide_top_05">
+                                            </div>
+                                            <p>
+                                                적과 흑
+                                                <span>스탕달</span>
+                                            </p>
+                                        </a>
+                                    </li>
+                                </ul>
+                                <ul class="swiper-slide">
+                                    <li><a href="javascript:return false;">
+                                            <div class="screen">
+                                                <img src="./images/main_images/section_3_book_intro/book_slide_top_06.jpg"
+                                                    alt="book_slide_top_06">
+                                            </div>
+                                            <p>
+                                                불멸
+                                                <span>밀란 쿤데라</span>
+                                            </p>
+                                        </a>
+                                    </li>
+                                </ul>
+                                <ul class="swiper-slide">
+                                    <li><a href="javascript:return false;">
+                                            <div class="screen">
+                                                <img src="./images/main_images/section_3_book_intro/book_slide_top_07.jpg"
+                                                    alt="book_slide_top_07">
+                                            </div>
+                                            <p>
+                                                <strong>참을 수 없는 존재의 가벼움</strong>
+                                                <span>밀란 쿤데라</span>
+                                            </p>
+                                        </a>
+                                    </li>
+                                </ul>
+                                <ul class="swiper-slide">
+                                    <li><a href="javascript:return false;">
+                                            <div class="screen">
+                                                <img src="./images/main_images/section_3_book_intro/book_slide_top_08.jpg"
+                                                    alt="book_slide_top_08">
+                                            </div>
+                                            <p>
+                                                진짜 나를 찾아라
+                                                <span>법정</span>
+                                            </p>
+                                        </a>
+                                    </li>
+                                </ul>
+                                <ul class="swiper-slide">
+                                    <li><a href="javascript:return false;">
+                                            <div class="screen">
+                                                <img src="./images/main_images/section_3_book_intro/book_slide_top_09.jpg"
+                                                    alt="book_slide_top_09">
+                                            </div>
+                                            <p>
+                                                죄와 벌
+                                                <span>도스토예프스키</span>
+                                            </p>
+                                        </a>
+                                    </li>
+                                </ul>
+                                <ul class="swiper-slide">
+                                    <li><a href="javascript:return false;">
+                                            <div class="screen">
+                                                <img src="./images/main_images/section_3_book_intro/book_slide_top_10.jpg"
+                                                    alt="book_slide_top_10">
+                                            </div>
+                                            <p>
+                                                허송세월
+                                                <span>김훈</span>
+                                            </p>
+                                        </a>
+                                    </li>
+                                </ul>
+                                <ul class="swiper-slide">
+                                    <li><a href="javascript:return false;">
+                                            <div class="screen">
+                                                <img src="./images/main_images/section_3_book_intro/book_slide_top_11.jpg"
+                                                    alt="book_slide_top_11">
+                                            </div>
+                                            <p>
+                                                호밀밭의 파수꾼
+                                                <span>J. D. 샐린저</span>
+                                            </p>
+                                        </a>
+                                    </li>
+                                </ul>
+                                <ul class="swiper-slide">
+                                    <li><a href="javascript:return false;">
+                                            <div class="screen">
+                                                <img src="./images/main_images/section_3_book_intro/book_slide_top_12.jpg"
+                                                    alt="book_slide_top_12">
+                                            </div>
+                                            <p>
+                                                모순
+                                                <span>양귀자</span>
+                                            </p>
+                                        </a>
+                                    </li>
+                                </ul>
+                                <ul class="swiper-slide">
+                                    <li><a href="javascript:return false;">
+                                            <div class="screen">
+                                                <img src="./images/main_images/section_3_book_intro/book_slide_top_13.jpg"
+                                                    alt="book_slide_top_13">
+                                            </div>
+                                            <p>
+                                                카라마조프가의 형제들
+                                                <span>도스토예프스키</span>
+                                            </p>
+                                        </a>
+                                    </li>
+                                </ul>
+                                <ul class="swiper-slide">
+                                    <li><a href="javascript:return false;">
+                                            <div class="screen">
+                                                <img src="./images/main_images/section_3_book_intro/book_slide_top_14.jpg"
+                                                    alt="book_slide_top_14">
+                                            </div>
+                                            <p>
+                                                캉디드 혹은 낙관주의
+                                                <span>볼테르</span>
+                                            </p>
+                                        </a>
+                                    </li>
+                                </ul>
+                                <ul class="swiper-slide">
+                                    <li><a href="javascript:return false;">
+                                            <div class="screen">
+                                                <img src="./images/main_images/section_3_book_intro/book_slide_top_15.jpg"
+                                                    alt="book_slide_top_15">
+                                            </div>
+                                            <p>
+                                                파운데이션
+                                                <span>아이작 아시모프</span>
+                                            </p>
+                                        </a>
+                                    </li>
+                                </ul>
+                                <ul class="swiper-slide">
+                                    <li><a href="javascript:return false;">
+                                            <div class="screen">
+                                                <img src="./images/main_images/section_3_book_intro/book_slide_top_16.jpg"
+                                                    alt="book_slide_top_16">
+                                            </div>
+                                            <p>
+                                                마녀와의 7일
+                                                <span>히가시노 게이고</span>
+                                            </p>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <!-- Add Arrows -->
+                            <div class="swiper-button-next"></div>
+                            <div class="swiper-button-prev"></div>
+                            <div class="swiper-pagination"></div>
+                        </div>
+                    </div>
+                    <div class="section3_content content_left">
+                        <div class="title title_l">
+                            <h2 data-aos="fade-right" data-aos-duration="1000" data-aos-once="true"
+                                data-aos-easing="ease-in-out">
+                                신간부터 고전까지
+                                <br>전부 다 9,900원
+                            </h2>
+                            <p data-aos="fade-right" data-aos-duration="1000" data-aos-delay="50" data-aos-once="true"
+                                data-aos-easing="ease-in-out">
+                                한달 9,900원으로 신간부터 베스트셀러까지
+                                <br>무제한으로 독서탐구에 빠져보세요.
+                            </p>
+                        </div>
+                        <div class="section3_img" data-aos="fade-right" data-aos-duration="1000" data-aos-delay="100"
+                            data-aos-once="true" data-aos-easing="ease-in-out">
+                            <img src="./images/main_images/section_3_book_intro/bookshelf_1.svg" alt="bookshelf_1">
+                        </div>
+                    </div>
+                    <div class="section3_content content_right">
+                        <div class="title title_r">
+                            <h2 data-aos="fade-left" data-aos-duration="1000" data-aos-once="true"
+                                data-aos-easing="ease-in-out">
+                                나에게 맞는 방법으로
+                                <br>독서하세요
+                            </h2>
+                            <p data-aos="fade-left" data-aos-duration="1000" data-aos-delay="50" data-aos-once="true"
+                                data-aos-easing="ease-in-out">
+                                AI의 빅데이터를 통한 자기에게 맞는
+                                <br>독서패턴과 장르를 쉽게 파악하세요.
+                            </p>
+                        </div>
+                        <div class="section3_img" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="100"
+                            data-aos-once="true" data-aos-easing="ease-in-out">
+                            <img src="./images/main_images/section_3_book_intro/bookshelf_2.svg" alt="bookshelf_2">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="section_3_book_intro_m">
+                <div class="title">
+                    <h2>
+                        신간부터 고전까지
+                        <br>전부 다 9,900원
+                    </h2>
+                    <p>
+                        한달 9,900원으로 신간부터 베스트셀러까지
+                        <br>무제한으로 독서탐구에 빠져보세요.
+                    </p>
+                </div>
+                <div class="slide_wrap_r">
+                    <div id="slide_m" class="slide-right_m">
+                        <div class="multiple-items slick_r">
+                            <div>
+                                <div class="screen_m">
+                                    <img src="./images/main_images/section_3_book_intro/book_slide_top_01.jpg"
+                                        alt="book_slide_top_01">
+                                </div>
+                                <p>
+                                    총, 균, 쇠
+                                    <span>제레드 다이아몬드</span>
+                                </p>
+                            </div>
+                            <div>
+                                <div class="screen_m">
+                                    <img src="./images/main_images/section_3_book_intro/book_slide_top_02.jpg"
+                                        alt="book_slide_top_02">
+                                </div>
+                                <p>
+                                    창백한 푸른 점
+                                    <span>칼 세이건</span>
+                                </p>
+                            </div>
+                            <div>
+                                <div class="screen_m">
+                                    <img src="./images/main_images/section_3_book_intro/book_slide_top_03.jpg"
+                                        alt="book_slide_top_03">
+                                </div>
+                                <p>
+                                    코스모스
+                                    <span>칼 세이건</span>
+                                </p>
+                            </div>
+                            <div>
+                                <div class="screen_m">
+                                    <img src="./images/main_images/section_3_book_intro/book_slide_top_04.jpg"
+                                        alt="book_slide_top_04">
+                                </div>
+                                <p>
+                                    데미안
+                                    <span>헤르만 헤세</span>
+                                </p>
+                            </div>
+                            <div>
+                                <div class="screen_m">
+                                    <img src="./images/main_images/section_3_book_intro/book_slide_top_05.jpg"
+                                        alt="book_slide_top_05">
+                                </div>
+                                <p>
+                                    적과 흑
+                                    <span>스탕달</span>
+                                </p>
+                            </div>
+                            <div>
+                                <div class="screen_m">
+                                    <img src="./images/main_images/section_3_book_intro/book_slide_top_06.jpg"
+                                        alt="book_slide_top_06">
+                                </div>
+                                <p>
+                                    불멸
+                                    <span>밀란 쿤데라</span>
+                                </p>
+                            </div>
+                            <div>
+                                <div class="screen_m">
+                                    <img src="./images/main_images/section_3_book_intro/book_slide_top_07.jpg"
+                                        alt="book_slide_top_07">
+                                </div>
+                                <p>
+                                    <strong>참을 수 없는 존재의 가벼움</strong>
+                                    <span>밀란 쿤데라</span>
+                                </p>
+                            </div>
+                            <div>
+                                <div class="screen_m">
+                                    <img src="./images/main_images/section_3_book_intro/book_slide_top_08.jpg"
+                                        alt="book_slide_top_08">
+                                </div>
+                                <p>
+                                    진짜 나를 찾아라
+                                    <span>법정</span>
+                                </p>
+                            </div>
+                            <div>
+                                <div class="screen_m">
+                                    <img src="./images/main_images/section_3_book_intro/book_slide_top_09.jpg"
+                                        alt="book_slide_top_09">
+                                </div>
+                                <p>
+                                    죄와 벌
+                                    <span>도스토예프스키</span>
+                                </p>
+                            </div>
+                            <div>
+                                <div class="screen_m">
+                                    <img src="./images/main_images/section_3_book_intro/book_slide_top_10.jpg"
+                                        alt="book_slide_top_10">
+                                </div>
+                                <p>
+                                    허송세월
+                                    <span>김훈</span>
+                                </p>
+                            </div>
+                            <div>
+                                <div class="screen_m">
+                                    <img src="./images/main_images/section_3_book_intro/book_slide_top_11.jpg"
+                                        alt="book_slide_top_11">
+                                </div>
+                                <p>
+                                    호밀밭의 파수꾼
+                                    <span>J. D. 샐린저</span>
+                                </p>
+                                </a>
+                            </div>
+                            <div>
+                                <div class="screen_m">
+                                    <img src="./images/main_images/section_3_book_intro/book_slide_top_12.jpg"
+                                        alt="book_slide_top_12">
+                                </div>
+                                <p>
+                                    모순
+                                    <span>양귀자</span>
+                                </p>
+                            </div>
+                            <div>
+                                <div class="screen_m">
+                                    <img src="./images/main_images/section_3_book_intro/book_slide_top_13.jpg"
+                                        alt="book_slide_top_13">
+                                </div>
+                                <p>
+                                    카라마조프가의 형제들
+                                    <span>도스토예프스키</span>
+                                </p>
+                            </div>
+                            <div>
+                                <div class="screen_m">
+                                    <img src="./images/main_images/section_3_book_intro/book_slide_top_14.jpg"
+                                        alt="book_slide_top_14">
+                                </div>
+                                <p>
+                                    캉디드 혹은 낙관주의
+                                    <span>볼테르</span>
+                                </p>
+                            </div>
+                            <div>
+                                <div class="screen_m">
+                                    <img src="./images/main_images/section_3_book_intro/book_slide_top_15.jpg"
+                                        alt="book_slide_top_15">
+                                </div>
+                                <p>
+                                    파운데이션
+                                    <span>아이작 아시모프</span>
+                                </p>
+                            </div>
+                            <div>
+                                <div class="screen_m">
+                                    <img src="./images/main_images/section_3_book_intro/book_slide_top_16.jpg"
+                                        alt="book_slide_top_16">
+                                </div>
+                                <p>
+                                    마녀와의 7일
+                                    <span>히가시노 게이고</span>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="title">
+                    <h2>
+                        나에게 맞는 방법으로
+                        <br>독서하세요
+                    </h2>
+                    <p>
+                        AI의 빅데이터를 통한 자기에게 맞는
+                        <br>독서패턴과 장르를 쉽게 파악하세요.
+                    </p>
+                </div>
+                <div class="slide_wrap_l">
+                    <div id="slide_m" class="slide-left_m">
+                        <div class="multiple-items slick_l">
+                            <div>
+                                <div class="screen_m">
+                                    <img src="./images/main_images/section_3_book_intro/book_slide_bot_01.jpg"
+                                        alt="book_slide_bot_01">
+                                </div>
+                                <p>
+                                    눈물을 마시는 새
+                                    <span>이영도</span>
+                                </p>
+                            </div>
+                            <div>
+                                <div class="screen_m">
+                                    <img src="./images/main_images/section_3_book_intro/book_slide_bot_02.jpg"
+                                        alt="book_slide_bot_02">
+                                </div>
+                                <p>
+                                    삼체
+                                    <span>류츠신</span>
+                                </p>
+                            </div>
+                            <div>
+                                <div class="screen_m">
+                                    <img src="./images/main_images/section_3_book_intro/book_slide_bot_03.jpg"
+                                        alt="book_slide_bot_03">
+                                </div>
+                                <p>
+                                    멋진 징조들
+                                    <span>테리 프레쳇, 닐 게이먼</span>
+                                </p>
+                            </div>
+                            <div>
+                                <div class="screen_m">
+                                    <img src="./images/main_images/section_3_book_intro/book_slide_bot_04.jpg"
+                                        alt="book_slide_bot_04">
+                                </div>
+                                <p>
+                                    듄
+                                    <span>프랭크 허버트</span>
+                                </p>
+                            </div>
+                            <div>
+                                <div class="screen_m">
+                                    <img src="./images/main_images/section_3_book_intro/book_slide_bot_05.jpg"
+                                        alt="book_slide_bot_05">
+                                </div>
+                                <p>
+                                    위쳐
+                                    <span>안제이 사프콥스키</span>
+                                </p>
+                            </div>
+                            <div>
+                                <div class="screen_m">
+                                    <img src="./images/main_images/section_3_book_intro/book_slide_bot_06.jpg"
+                                        alt="book_slide_bot_06">
+                                </div>
+                                <p>
+                                    유혹하는 글쓰기
+                                    <span>스티븐 킹</span>
+                                </p>
+                            </div>
+                            <div>
+                                <div class="screen_m">
+                                    <img src="./images/main_images/section_3_book_intro/book_slide_bot_07.jpg"
+                                        alt="book_slide_bot_07">
+                                </div>
+                                <p>
+                                    한밤의 모험
+                                    <span>발터 뫼르스</span>
+                                </p>
+                            </div>
+                            <div>
+                                <div class="screen_m">
+                                    <img src="./images/main_images/section_3_book_intro/book_slide_bot_08.jpg"
+                                        alt="book_slide_bot_08">
+                                </div>
+                                <p>
+                                    꿈꾸는 책들의 미로
+                                    <span>발터 뫼르스</span>
+                                </p>
+                            </div>
+                            <div>
+                                <div class="screen_m">
+                                    <img src="./images/main_images/section_3_book_intro/book_slide_bot_09.jpg"
+                                        alt="book_slide_bot_09">
+                                </div>
+                                <p>
+                                    노변의 피크닉
+                                    <span>스투르가츠키</span>
+                                </p>
+                            </div>
+                            <div>
+                                <div class="screen_m">
+                                    <img src="./images/main_images/section_3_book_intro/book_slide_bot_10.jpg"
+                                        alt="book_slide_bot_10">
+                                </div>
+                                <p>
+                                    눈먼 시계공
+                                    <span>리처드 도킨스</span>
+                                </p>
+                            </div>
+                            <div>
+                                <div class="screen_m">
+                                    <img src="./images/main_images/section_3_book_intro/book_slide_bot_11.jpg"
+                                        alt="book_slide_bot_11">
+                                </div>
+                                <p>
+                                    보편의 단어
+                                    <span>이기주</span>
+                                </p>
+                            </div>
+                            <div>
+                                <div class="screen_m">
+                                    <img src="./images/main_images/section_3_book_intro/book_slide_bot_12.jpg"
+                                        alt="book_slide_bot_12">
+                                </div>
+                                <p>
+                                    불변의 법칙
+                                    <span>모건 하우절</span>
+                                </p>
+                            </div>
+                            <div>
+                                <div class="screen_m">
+                                    <img src="./images/main_images/section_3_book_intro/book_slide_bot_13.jpg"
+                                        alt="book_slide_bot_13">
+                                </div>
+                                <p>
+                                    만들어진 신
+                                    <span>리처드 도킨스</span>
+                                </p>
+                            </div>
+                            <div>
+                                <div class="screen_m">
+                                    <img src="./images/main_images/section_3_book_intro/book_slide_bot_14.jpg"
+                                        alt="book_slide_bot_14">
+                                </div>
+                                <p>
+                                    화씨 451
+                                    <span>레이 브래드버리</span>
+                                </p>
+                            </div>
+                            <div>
+                                <div class="screen_m">
+                                    <img src="./images/main_images/section_3_book_intro/book_slide_bot_15.jpg"
+                                        alt="book_slide_bot_15">
+                                </div>
+                                <p>
+                                    이기적 유전자
+                                    <span>리처드 도킨스</span>
+                                </p>
+                            </div>
+                            <div>
+                                <div class="screen_m">
+                                    <img src="./images/main_images/section_3_book_intro/book_slide_bot_16.jpg"
+                                        alt="book_slide_bot_16">
+                                </div>
+                                <p>
+                                    마흔에 읽는 쇼펜하우어
+                                    <span>강용수</span>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="section_4_app_intro">
+                <div class="title title_l">
+                    <h2 data-aos="fade-right" data-aos-duration="1000" data-aos-once="true"
+                        data-aos-easing="ease-in-out">
+                        쉽고 빠르게 접하는
+                        <br>나만의 서재
+                    </h2>
+                    <p data-aos="fade-right" data-aos-duration="1000" data-aos-delay="50" data-aos-once="true"
+                        data-aos-easing="ease-in-out">
+                        이야기를 즐기는 나만의 공간
+                        <br>혜윰앱으로 간편하게 만나보세요.
+                    </p>
+                </div>
+                <div class="app_btn_wrap">
+                    <div class="app_btn app_btn_pc btn_calender" data-aos="fade-right" data-aos-duration="1000"
+                        data-aos-easing="ease-in-out">
+                        <div class="app_btn_txt">
+                            <p>
+                                독서 <span>캘린더</span>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="app_btn app_btn_pc btn_editor_choice" data-aos="fade-left" data-aos-duration="1000"
+                        data-aos-easing="ease-in-out">
+                        <div class="app_btn_txt">
+                            <p>
+                                편집자
+                                <br>추천도서
+                            </p>
+                        </div>
+                    </div>
+                    <div class="app_btn app_btn_pc btn_bookshelf" data-aos="fade-right" data-aos-duration="1000"
+                        data-aos-easing="ease-in-out">
+                        <div class="app_btn_txt">
+                            <p>
+                                서재
+                            </p>
+                        </div>
+
+                    </div>
+                    <div class="app_btn app_btn_pc btn_heyum_pick" data-aos="fade-left" data-aos-duration="1000"
+                        data-aos-easing="ease-in-out">
+                        <div class="app_btn_txt">
+                            <p>
+                                혜윰 픽
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="app_btn_wrap_m">
+                    <div class="app_btn app_btn_m btn_calender" data-aos="fade-up" data-aos-duration="1000"
+                        data-aos-easing="ease-in-out">
+                        <div class="app_btn_txt">
+                            <p>
+                                독서 <span>캘린더</span>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="app_btn app_btn_m btn_editor_choice" data-aos="fade-up" data-aos-duration="1000"
+                        data-aos-easing="ease-in-out">
+                        <div class="app_btn_txt">
+                            <p>
+                                편집자
+                                <br>추천도서
+                            </p>
+                        </div>
+                    </div>
+                    <div class="app_btn app_btn_m btn_bookshelf" data-aos="fade-up" data-aos-duration="1000"
+                        data-aos-easing="ease-in-out">
+                        <div class="app_btn_txt">
+                            <p>
+                                서재
+                            </p>
+                        </div>
+
+                    </div>
+                    <div class="app_btn app_btn_m btn_heyum_pick" data-aos="fade-up" data-aos-duration="1000"
+                        data-aos-easing="ease-in-out">
+                        <div class="app_btn_txt">
+                            <p>
+                                혜윰 픽
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="section4_img_wrap" data-aos="fade-up" data-aos-duration="1000">
+                    <p class="section4_img app_calendar"></p>
+                    <p class="section4_img app_choice"></p>
+                    <p class="section4_img app_bookshlef"></p>
+                    <p class="section4_img app_pick"></p>
+                </div>
+            </div>
+            <div id="section_5_banner_sub">
+                <p class="sub_banner_txt" data-aos="fade-down" data-aos-duration="1000" data-aos-easing="ease-in-out"
+                    data-aos-once="true">
+                    Open a Book,
+                </p>
+                <p class="sub_banner_txt" data-aos="fade-up" data-aos-duration="1000" data-aos-easing="ease-in-out"
+                    data-aos-once="true">
+                    Expand Your Horizons
+                </p>
+                <h3 class="sub_banner_txt_m">
+                    책을 펼치고
+                    <br>생각의 지평선을
+                    <br>넓혀보세요
+                </h3>
+            </div>
+            <div id="section_6_review">
+                <div class="inner_section6">
+                    <div class="title title_l">
+                        <h2 data-aos="fade-right" data-aos-duration="1000" data-aos-once="true"
+                            data-aos-easing="ease-in-out">
+                            혜윰을 아껴주시는
+                            <br>여러분들의 목소리
+                        </h2>
+                        <p data-aos="fade-right" data-aos-duration="1000" data-aos-delay="50" data-aos-once="true"
+                            data-aos-easing="ease-in-out">
+                            다양한 독자분들의 소중한 후기를 만나보세요.
+                        </p>
+                    </div>
+                    <ul class="review_wrap">
+                        <li>
+                            <h3>Trash_Mammal</h3>
+                            <div class="review_pic">
+                                <img src="./images/main_images/section_6_review/review_pic_01.png" alt="review_pic_01">
+                            </div>
+                            <div class="review_content">
+                                <ul>
+                                    <li>
+                                        <img src="./images/main_images/section_6_review/btn_likes.svg" alt="btn_likes">
+                                    </li>
+                                    <li>
+                                        <img src="./images/main_images/section_6_review/btn_talk.svg" alt="btn_talk">
+                                    </li>
+                                    <li>
+                                        <img src="./images/main_images/section_6_review/btn_share.svg" alt="btn_share">
+                                    </li>
+                                </ul>
+                                <p>
+                                    <span>Church_Mom</span>
+                                    님 외 여러명이 좋아합니다.
+                                </p>
+                                <p>
+                                    <span>Trash_Mammal</span>
+                                    친구들과 함께한 온라인
+                                    <br>독서클럽, 혜윰 덕분에 더 싸게하듯 ㅎㅎ
+                                </p>
+                                <p class="hash_tag">
+                                    #혜윰&nbsp;#독서후기&nbsp;#북클럽
+                                </p>
+                            </div>
+                        </li>
+                        <li>
+                            <h3>Bandit_Queen</h3>
+                            <div class="review_pic">
+                                <img src="./images/main_images/section_6_review/review_pic_02.png" alt="review_pic_02">
+                            </div>
+                            <div class="review_content">
+                                <ul>
+                                    <li>
+                                        <img src="./images/main_images/section_6_review/btn_likes.svg" alt="btn_likes">
+                                    </li>
+                                    <li>
+                                        <img src="./images/main_images/section_6_review/btn_talk.svg" alt="btn_talk">
+                                    </li>
+                                    <li>
+                                        <img src="./images/main_images/section_6_review/btn_share.svg" alt="btn_share">
+                                    </li>
+                                </ul>
+                                <p>
+                                    <span>Jackie_85</span>
+                                    님 외 여러명이 좋아합니다.
+                                </p>
+                                <p>
+                                    <span>Bandit_Queen</span>
+                                    책 읽을 시간이 없었는데 요새
+                                    <br>전자책 구독으로 틈틈히 독서하고 있네요 :D
+                                </p>
+                                <p class="hash_tag">
+                                    #ebook&nbsp;#혜윰&nbsp;#도서리뷰
+                                </p>
+                            </div>
+                        </li>
+                        <li>
+                            <h3>Gregg_rulz_OK</h3>
+                            <div class="review_pic">
+                                <img src="./images/main_images/section_6_review/review_pic_03.png" alt="review_pic_03">
+                            </div>
+                            <div class="review_content">
+                                <ul>
+                                    <li>
+                                        <img src="./images/main_images/section_6_review/btn_likes.svg" alt="btn_likes">
+                                    </li>
+                                    <li>
+                                        <img src="./images/main_images/section_6_review/btn_talk.svg" alt="btn_talk">
+                                    </li>
+                                    <li>
+                                        <img src="./images/main_images/section_6_review/btn_share.svg" alt="btn_share">
+                                    </li>
+                                </ul>
+                                <p>
+                                    <span>Cap'n</span>
+                                    님 외 여러명이 좋아합니다.
+                                </p>
+                                <p>
+                                    <span>Gregg_rulz_OK</span>
+                                    그냥 책보다 가성비 쩌네요
+                                    <br>제 남친도 구독 같이 시작했음
+                                </p>
+                                <p class="hash_tag">
+                                    #혜윰&nbsp;#전자책 후기&nbsp;#독서 모임
+                                </p>
+                            </div>
+                        </li>
+                        <li>
+                            <h3>Cap'n</h3>
+                            <div class="review_pic">
+                                <img src="./images/main_images/section_6_review/review_pic_04.png" alt="review_pic_04">
+                            </div>
+                            <div class="review_content">
+                                <ul>
+                                    <li>
+                                        <img src="./images/main_images/section_6_review/btn_likes.svg" alt="btn_likes">
+                                    </li>
+                                    <li>
+                                        <img src="./images/main_images/section_6_review/btn_talk.svg" alt="btn_talk">
+                                    </li>
+                                    <li>
+                                        <img src="./images/main_images/section_6_review/btn_share.svg" alt="btn_share">
+                                    </li>
+                                </ul>
+                                <p>
+                                    <span>Bug_35</span>
+                                    님 외 여러명이 좋아합니다.
+                                </p>
+                                <p>
+                                    <span>Cap'n</span>
+                                    구독에 외국어 서적도 있어서 관심있던
+                                    <br>과학논문도 볼수 있었네요. 추천드려요. :-)
+                                </p>
+                                <p class="hash_tag">
+                                    #북클럽&nbsp;#ebook&nbsp;#혜윰
+                                </p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div id="section_6_review_m">
+                <div class="title">
+                    <h2>
+                        혜윰을 아껴주시는
+                        <br>여러분들의 목소리
+                    </h2>
+                    <p>
+                        다양한 독자분들의 소중한 후기를 만나보세요.
+                    </p>
+                </div>
+                <div class="review_slide_wrap">
+                    <div class="review_slide">
+                        <h3 class="person_1">Trash_Mammal</h3>
+                        <div class="review_pic">
+                            <img src="./images/main_images/section_6_review/review_pic_01.png" alt="review_pic_01">
+                        </div>
+                        <div class="review_content">
+                            <ul>
+                                <li>
+                                    <img src="./images/main_images/section_6_review/btn_likes.svg" alt="btn_likes">
+                                </li>
+                                <li>
+                                    <img src="./images/main_images/section_6_review/btn_talk.svg" alt="btn_talk">
+                                </li>
+                                <li>
+                                    <img src="./images/main_images/section_6_review/btn_share.svg" alt="btn_share">
+                                </li>
+                            </ul>
+                            <p>
+                                <span>Church_Mom</span>
+                                님 외 여러명이 좋아합니다.
+                            </p>
+                            <p>
+                                <span>Trash_Mammal</span>
+                                친구들과 함께한 온라인
+                                <br>독서클럽, 혜윰 덕분에 더 싸게하듯 ㅎㅎ
+                            </p>
+                            <p class="hash_tag_m">
+                                #혜윰&nbsp;#독서후기&nbsp;#북클럽
+                            </p>
+                        </div>
+                    </div>
+                    <div class="review_slide">
+                        <h3 class="person_2">Bandit_Queen</h3>
+                        <div class="review_pic">
+                            <img src="./images/main_images/section_6_review/review_pic_02.png" alt="review_pic_02">
+                        </div>
+                        <div class="review_content">
+                            <ul>
+                                <li>
+                                    <img src="./images/main_images/section_6_review/btn_likes.svg" alt="btn_likes">
+                                </li>
+                                <li>
+                                    <img src="./images/main_images/section_6_review/btn_talk.svg" alt="btn_talk">
+                                </li>
+                                <li>
+                                    <img src="./images/main_images/section_6_review/btn_share.svg" alt="btn_share">
+                                </li>
+                            </ul>
+                            <p>
+                                <span>Jackie_85</span>
+                                님 외 여러명이 좋아합니다.
+                            </p>
+                            <p>
+                                <span>Bandit_Queen</span>
+                                책읽을 시간이 없었는데 요새
+                                <br>전자책 구독으로 틈틈히 독서하고 있네요 :D
+                            </p>
+                            <p class="hash_tag_m">
+                                #ebook&nbsp;#혜윰&nbsp;#도서리뷰
+                            </p>
+                        </div>
+                    </div>
+                    <div class="review_slide">
+                        <h3 class="person_3">Gregg_rulz_OK</h3>
+                        <div class="review_pic">
+                            <img src="./images/main_images/section_6_review/review_pic_03.png" alt="review_pic_03">
+                        </div>
+                        <div class="review_content">
+                            <ul>
+                                <li>
+                                    <img src="./images/main_images/section_6_review/btn_likes.svg" alt="btn_likes">
+                                </li>
+                                <li>
+                                    <img src="./images/main_images/section_6_review/btn_talk.svg" alt="btn_talk">
+                                </li>
+                                <li>
+                                    <img src="./images/main_images/section_6_review/btn_share.svg" alt="btn_share">
+                                </li>
+                            </ul>
+                            <p>
+                                <span>Cap'n</span>
+                                님 외 여러명이 좋아합니다.
+                            </p>
+                            <p>
+                                <span>Gregg_rulz_OK</span>
+                                그냥 책보다 가성비 쩌네요
+                                <br>제 남친도 구독 같이 시작했음
+                            </p>
+                            <p class="hash_tag_m">
+                                #혜윰&nbsp;#전자책 후기&nbsp;#독서 모임
+                            </p>
+                        </div>
+                    </div>
+                    <div class="review_slide">
+                        <h3 class="person_4">Cap'n</h3>
+                        <div class="review_pic">
+                            <img src="./images/main_images/section_6_review/review_pic_04.png" alt="review_pic_04">
+                        </div>
+                        <div class="review_content">
+                            <ul>
+                                <li>
+                                    <img src="./images/main_images/section_6_review/btn_likes.svg" alt="btn_likes">
+                                </li>
+                                <li>
+                                    <img src="./images/main_images/section_6_review/btn_talk.svg" alt="btn_talk">
+                                </li>
+                                <li>
+                                    <img src="./images/main_images/section_6_review/btn_share.svg" alt="btn_share">
+                                </li>
+                            </ul>
+                            <p>
+                                <span>Bug_35</span>
+                                님 외 여러명이 좋아합니다.
+                            </p>
+                            <p>
+                                <span>Cap'n</span>
+                                구독에 외국어 서적도 있어서 관심있던
+                                <br>과학논문도 볼수 있었네요. 추천드려요. :-)
+                            </p>
+                            <p class="hash_tag_m">
+                                #북클럽&nbsp;#ebook&nbsp;#혜윰
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <div id="footer">
+            <div class="inner_footer">
+                <h1 class="footer_logo">
+                    <img src="./images/footer/footer_logo.svg" alt="footer_logo">
+                </h1>
+                <div class="footer_txt">
+                    <ul class="footer_menu">
+                        <li>
+                            <a href="javascript:return false;">회사소개</a>
+                        </li>
+                        <li>
+                            <a href="javascript:return false;">이용약관</a>
+                        </li>
+                        <li>
+                            <a href="javascript:return false;">
+                                <span>개인정보처리방침</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="javascript:return false;">청소년보호정책</a>
+                        </li>
+                        <li>
+                            <a href="javascript:return false;">콘텐츠 제휴문의</a>
+                        </li>
+                    </ul>
+                    <p>
+                        대표:전보현
+                        <br>주소 : 부산광역시 중구 중앙대로 26 다원중앙타워 9층
+                        <br>E-Mail : Heyum@Gmail.com
+                        <br>Tel : 010 - 8617 - 2930
+                    </p>
+                    <p>
+                        Copyright Ⓒ Heyum Company. All Rights Reserved.
+                    </p>
+                </div>
+                <ul class="sns_link">
+                    <li>
+                        <a href="https://www.youtube.com/" target='_blank'>
+                            <img src="./images/footer/sns_youtube.png" alt="sns_youtube">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://x.com/" target='_blank'>
+                            <img src="./images/footer/sns_twitter.png" alt="sns_twitter">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.instagram.com/" target='_blank'>
+                            <img src="./images/footer/sns_insta.png" alt="sns_insta">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://discord.com/" target='_blank'>
+                            <img src="./images/footer/sns_discord.png" alt="sns_discord">
+                        </a>
+                    </li>
+                </ul>
+                <div class="sns_link_m">
+                    <ul>
+                        <li>
+                            <h3>FOLLOW US</h3>
+                        </li>
+                        <li>
+                            <a href="https://www.youtube.com/" target='_blank'>
+                                <img src="./images/footer/sns_youtube.png" alt="sns_youtube">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://x.com/" target='_blank'>
+                                <img src="./images/footer/sns_twitter.png" alt="sns_twitter">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.instagram.com/" target='_blank'>
+                                <img src="./images/footer/sns_insta.png" alt="sns_insta">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://discord.com/" target='_blank'>
+                                <img src="./images/footer/sns_discord.png" alt="sns_discord">
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div id="top_btn">
+            <p>Top</p>
+        </div>
+    </div>
+    <!-- jq js -->
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <script>
+        // 모달 팝업
+        $('.modal').hide();
+        $('.util li a').click(function () {
+            $('.modal').fadeIn();
+        });
+        $('.btn_close').click(function () {
+            $('.modal').fadeOut(0);
+        });
+        $(document).mouseup(function (e) {
+            if ($(".modal").has(e.target).length === 0) {
+                $(".modal").hide();
+            }
+        });
+        // 서브메뉴
+        $('.submenu').hide();
+        $('.header_bot').mouseenter(function () {
+            $('.submenu').stop().slideDown(200);
+        });
+        $('.header_bot').mouseleave(function () {
+            $('.submenu').stop().slideUp(200);
+        });
+        // 탑버튼
+        $('#top_btn').click(function () {
+            $('body, html').animate({
+                scrollTop: 0
+            }, 500);
+        });
+        // 앱버튼
+        $(function () {
+            $(".btn_calender").click(function () {
+
+                $(".app_calendar").fadeIn().siblings().fadeOut();
+            });
+            $(".btn_editor_choice").click(function () {
+
+                $(".app_choice").fadeIn().siblings().fadeOut();
+            });
+            $(".btn_bookshelf").click(function () {
+
+                $(".app_bookshlef").fadeIn().siblings().fadeOut();
+            });
+            $(".btn_heyum_pick").click(function () {
+
+                $(".app_pick").fadeIn().siblings().fadeOut();
+            });
+        });
+        //햄버거 버튼
+        $(".open_btn").click(function () {
+            $(".m_gnb_wrap").css({
+                'left': '50vw',
+                'transition': 'left 0.5s'
+            })
+        });
+        $('.close_btn').click(function(){
+            $(".m_gnb_wrap").css({
+                'left': '100vw',
+                'transition':'left 0.5s'
+            })
+        });
+        $(document).mouseup(function (e) {
+            if ($(".m_gnb_wrap").has(e.target).length === 0) {
+                $(".m_gnb_wrap").css({
+                    'left': '100vw',
+                    'transition': 'left 0.5s'
+                })
+            }
+        });
+    </script>
+    <!-- swiper js  -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script>
+        var swiper = new Swiper('.swiper-container', {
+            slidesPerView: 4,
+            spaceBetween: 23,
+            observer: true,
+            observeParents: true,
+            // centeredSlides: true,
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+                dynamicBullets: true,
+            },
+            loop: true,
+            loopAdditionalSlides: 1,
+            autoplay: {
+                delay: 2000,
+                disableOnInteraction: false,
+            },
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+        });
+    </script>
+    <!-- slick js -->
+    <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script>
+        $('.multiple-items').slick({
+            infinite: true,
+            slidesToShow: 2,
+            slidesToScroll: 1,
+            autoplay: true,
+            autoplaySpeed: 2000,
+            appendArrows: false,
+        });
+    </script>
+    <script>
+        $('.review_slide_wrap').slick({
+            variableWidth: true,
+            adaptiveHeight: true,
+            infinite: true,
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            autoplay: true,
+            autoplaySpeed: 2000,
+            appendArrows: false,
+            centerMode: true,
+            centerPadding: '70px',
+        });
+    </script>
+    <!-- aos js -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+</body>
+
+</html>
