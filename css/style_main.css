@@ -299,8 +299,8 @@ body {
 
 .hamberger_wrap {
     position: fixed;
-    top: 10px;
-    right: 10px;
+    top: 20px;
+    right: 20px;
     z-index: 1;
 }
 
@@ -835,7 +835,7 @@ body {
 }
 
 #slide_m {
-    height: 400px;
+    height: 350px;
     background-color: #C59977;
     width: 100%;
     position: relative;
@@ -1276,7 +1276,8 @@ body {
     #top_btn,
     .sns_link,
     .footer_menu li::before,
-    .footer_txt p:nth-child(3) {
+    .footer_txt p:nth-child(3),
+    .name_pc {
         display: none;
     }
 
